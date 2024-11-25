@@ -1,6 +1,6 @@
-# Simple Node Server
+# Ignacio Simple Server
 
-This is a simple Node.js server with rate limiting and basic authentication middleware.
+This is a simple Node.js server implementation to serve JSON database, images, and voice file updates for ignacio_prayer_flutter_application (local testing). The database, images, and voice files are stored locally in the app; only version changes in [/data/versions.json] are checked during the local app startup process. If an update is needed, the local app calls for the corresponding files.
 
 ## Prerequisites
 
@@ -11,8 +11,8 @@ This is a simple Node.js server with rate limiting and basic authentication midd
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/simple-node-server.git
-   cd simple-node-server
+   git clone https://github.com/golar24/ignacio-simple-server.git
+   cd ignacio-simple-server
    ```
 
 2. Install dependencies:
@@ -35,6 +35,5 @@ This is a simple Node.js server with rate limiting and basic authentication midd
 - Basic authentication middleware for securing endpoints
 
 ## License
-
 
 This project is licensed under the MIT License.
