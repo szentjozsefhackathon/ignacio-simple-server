@@ -1,0 +1,273 @@
+[{"title": "Ima Szentírással",
+    "image": "szentiras.jpg",
+    "prayers": [
+      {
+        "title": "Ignáci szemlélődés",
+        "description": "Az ima előkészítése (5-10 perc):",
+        "image": "ignaciszemlelodes.jpg",
+        "voice_options": ["Női", "Férfi 2"],
+        "minTimeInMinutes": 30,
+        "steps": [
+          {
+            "description": "Isten jelenlétébe helyezkedem (testtartás, megérkezés). Elképzelem, hogy Isten színe előtt állok.",
+            "voices": ["ignaci1noi.mp3", "ignaci1ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Elmondom a bevezető imát: Uram, add, hogy ezt az időt egészen Neked tudjam adni mindazzal, amim van és ami vagyok. Legyen ez a Te dicsőségedre, tiszteletedre és szolgálatodra.",
+            "voices": ["ignaci2noi.mp3", "ignaci2ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Kérem a kegyelmet, ami előzőleg megfogalmazódott bennem.",
+            "voices": ["ignaci3noi.mp3", "ignaci3ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Röviden felidézem az evangéliumi történetet, amit szemlélni készülök.",
+            "voices": ["ignaci4noi.mp3", "ignaci4ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Elképzelem a helyszínt, ahol a jelenet játszódik.",
+            "voices": ["ignaci5noi.mp3", "ignaci5ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Az ima során úgy képzelem el a jelenetet, hogy magam is ott vagyok - külső szemlélőként vagy az események részeseként. Látom a személyeket, hallgatom beszédüket, figyelem cselekedeteiket. Ott időzök el, ahol leginkább érintve érzem magam. Igyekszem mindebből saját életemre is tanulságokat levonni..",
+            "voices": ["ignaci6noi.mp3", "ignaci6ferfi2.mp3"],
+            "timeInSeconds": 50,
+            "type": "FLEX"
+          },
+          {
+            "description": "Ami megérintett, arról baráti beszélgetésbe kezdek Jézussal, vagy a Szentháromség másik két személyével.",
+            "voices": ["ignaci7noi.mp3", "ignaci7ferfi2.mp3"],
+            "timeInSeconds": 20,
+            "type": "FLEX"
+          },
+          {
+            "description": "Befejezem egy Miatyánkkal vagy egy Dicsőséggel.",
+            "voices": ["ignaci8noi.mp3", "ignaci8ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Mire szeretnék visszatérni?",
+            "voices": ["ignaci9noi.mp3", "ignaci9ferfi2.mp3"],
+            "timeInSeconds": 480,
+            "type": "FIX"
+          }
+        ]
+      }
+    ]  
+  },
+  {"title": "Meditációs imák",
+    "image": "meditaciosima.jpg",
+    "prayers": [
+      {
+        "title": "Ignáci szemlélődés",
+        "description": "Az ima előkészítése (5-10 perc):",
+        "image": "ignaciszemlelodes.jpg",
+        "voice_options": ["Női", "Férfi 2"],
+        "minTimeInMinutes": 30,
+        "steps": [
+          {
+            "description": "Isten jelenlétébe helyezkedem (testtartás, megérkezés). Elképzelem, hogy Isten színe előtt állok.",
+            "voices": ["ignaci1noi.mp3", "ignaci1ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Elmondom a bevezető imát: Uram, add, hogy ezt az időt egészen Neked tudjam adni mindazzal, amim van és ami vagyok. Legyen ez a Te dicsőségedre, tiszteletedre és szolgálatodra.",
+            "voices": ["ignaci2noi.mp3", "ignaci2ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Kérem a kegyelmet, ami előzőleg megfogalmazódott bennem.",
+            "voices": ["ignaci3noi.mp3", "ignaci3ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Röviden felidézem az evangéliumi történetet, amit szemlélni készülök.",
+            "voices": ["ignaci4noi.mp3", "ignaci4ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Elképzelem a helyszínt, ahol a jelenet játszódik.",
+            "voices": ["ignaci5noi.mp3", "ignaci5ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Az ima során úgy képzelem el a jelenetet, hogy magam is ott vagyok - külső szemlélőként vagy az események részeseként. Látom a személyeket, hallgatom beszédüket, figyelem cselekedeteiket. Ott időzök el, ahol leginkább érintve érzem magam. Igyekszem mindebből saját életemre is tanulságokat levonni..",
+            "voices": ["ignaci6noi.mp3", "ignaci6ferfi2.mp3"],
+            "timeInSeconds": 50,
+            "type": "FLEX"
+          },
+          {
+            "description": "Ami megérintett, arról baráti beszélgetésbe kezdek Jézussal, vagy a Szentháromség másik két személyével.",
+            "voices": ["ignaci7noi.mp3", "ignaci7ferfi2.mp3"],
+            "timeInSeconds": 20,
+            "type": "FLEX"
+          },
+          {
+            "description": "Befejezem egy Miatyánkkal vagy egy Dicsőséggel.",
+            "voices": ["ignaci8noi.mp3", "ignaci8ferfi2.mp3"],
+            "timeInSeconds": 60,
+            "type": "FIX"
+          },
+          {
+            "description": "Mire szeretnék visszatérni?",
+            "voices": ["ignaci9noi.mp3", "ignaci9ferfi2.mp3"],
+            "timeInSeconds": 480,
+            "type": "FIX"
+          }
+        ]
+      }
+     ]  
+  },
+  {"title": "Examen",
+  "image": "examen.jpg",
+  "prayers": [
+    {
+      "title": "Ignáci szemlélődés",
+      "description": "Az ima előkészítése (5-10 perc):",
+      "image": "ignaciszemlelodes.jpg",
+      "voice_options": ["Női", "Férfi 2"],
+      "minTimeInMinutes": 30,
+      "steps": [
+        {
+          "description": "Isten jelenlétébe helyezkedem (testtartás, megérkezés). Elképzelem, hogy Isten színe előtt állok.",
+          "voices": ["ignaci1noi.mp3", "ignaci1ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Elmondom a bevezető imát: Uram, add, hogy ezt az időt egészen Neked tudjam adni mindazzal, amim van és ami vagyok. Legyen ez a Te dicsőségedre, tiszteletedre és szolgálatodra.",
+          "voices": ["ignaci2noi.mp3", "ignaci2ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Kérem a kegyelmet, ami előzőleg megfogalmazódott bennem.",
+          "voices": ["ignaci3noi.mp3", "ignaci3ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Röviden felidézem az evangéliumi történetet, amit szemlélni készülök.",
+          "voices": ["ignaci4noi.mp3", "ignaci4ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Elképzelem a helyszínt, ahol a jelenet játszódik.",
+          "voices": ["ignaci5noi.mp3", "ignaci5ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Az ima során úgy képzelem el a jelenetet, hogy magam is ott vagyok - külső szemlélőként vagy az események részeseként. Látom a személyeket, hallgatom beszédüket, figyelem cselekedeteiket. Ott időzök el, ahol leginkább érintve érzem magam. Igyekszem mindebből saját életemre is tanulságokat levonni..",
+          "voices": ["ignaci6noi.mp3", "ignaci6ferfi2.mp3"],
+          "timeInSeconds": 50,
+          "type": "FLEX"
+        },
+        {
+          "description": "Ami megérintett, arról baráti beszélgetésbe kezdek Jézussal, vagy a Szentháromség másik két személyével.",
+          "voices": ["ignaci7noi.mp3", "ignaci7ferfi2.mp3"],
+          "timeInSeconds": 20,
+          "type": "FLEX"
+        },
+        {
+          "description": "Befejezem egy Miatyánkkal vagy egy Dicsőséggel.",
+          "voices": ["ignaci8noi.mp3", "ignaci8ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Mire szeretnék visszatérni?",
+          "voices": ["ignaci9noi.mp3", "ignaci9ferfi2.mp3"],
+          "timeInSeconds": 480,
+          "type": "FIX"
+        }
+      ]
+    }
+   ]  
+  },
+  {"title": "Egyéb Döntés-Kommunikáció-Reflexió",
+  "image": "egyeb.jpg",
+  "prayers": [
+    {
+      "title": "Ignáci szemlélődés",
+      "description": "Az ima előkészítése (5-10 perc):",
+      "image": "ignaciszemlelodes.jpg",
+      "voice_options": ["Női", "Férfi 2"],
+      "minTimeInMinutes": 30,
+      "steps": [
+        {
+          "description": "Isten jelenlétébe helyezkedem (testtartás, megérkezés). Elképzelem, hogy Isten színe előtt állok.",
+          "voices": ["ignaci1noi.mp3", "ignaci1ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Elmondom a bevezető imát: Uram, add, hogy ezt az időt egészen Neked tudjam adni mindazzal, amim van és ami vagyok. Legyen ez a Te dicsőségedre, tiszteletedre és szolgálatodra.",
+          "voices": ["ignaci2noi.mp3", "ignaci2ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Kérem a kegyelmet, ami előzőleg megfogalmazódott bennem.",
+          "voices": ["ignaci3noi.mp3", "ignaci3ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Röviden felidézem az evangéliumi történetet, amit szemlélni készülök.",
+          "voices": ["ignaci4noi.mp3", "ignaci4ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Elképzelem a helyszínt, ahol a jelenet játszódik.",
+          "voices": ["ignaci5noi.mp3", "ignaci5ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Az ima során úgy képzelem el a jelenetet, hogy magam is ott vagyok - külső szemlélőként vagy az események részeseként. Látom a személyeket, hallgatom beszédüket, figyelem cselekedeteiket. Ott időzök el, ahol leginkább érintve érzem magam. Igyekszem mindebből saját életemre is tanulságokat levonni..",
+          "voices": ["ignaci6noi.mp3", "ignaci6ferfi2.mp3"],
+          "timeInSeconds": 50,
+          "type": "FLEX"
+        },
+        {
+          "description": "Ami megérintett, arról baráti beszélgetésbe kezdek Jézussal, vagy a Szentháromség másik két személyével.",
+          "voices": ["ignaci7noi.mp3", "ignaci7ferfi2.mp3"],
+          "timeInSeconds": 20,
+          "type": "FLEX"
+        },
+        {
+          "description": "Befejezem egy Miatyánkkal vagy egy Dicsőséggel.",
+          "voices": ["ignaci8noi.mp3", "ignaci8ferfi2.mp3"],
+          "timeInSeconds": 60,
+          "type": "FIX"
+        },
+        {
+          "description": "Mire szeretnék visszatérni?",
+          "voices": ["ignaci9noi.mp3", "ignaci9ferfi2.mp3"],
+          "timeInSeconds": 480,
+          "type": "FIX"
+        }
+      ]
+    }
+  ]  
+  }
+]

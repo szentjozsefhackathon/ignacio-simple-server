@@ -29,8 +29,8 @@ app.use('/api/media', mediaRoutes)
 
 // Load SSL certificates
 const sslOptions = {
-  key: fs.readFileSync('certs/server.key'),
-  cert: fs.readFileSync('certs/server.cert')
+  key: fs.readFileSync('server/certs/server.key'),
+  cert: fs.readFileSync('server/certs/server.cert')
 };
 
 // Start HTTPS server
