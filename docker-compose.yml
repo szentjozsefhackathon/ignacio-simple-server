@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+  # flutter-web:
+  #   build:
+  #     context: ./flutter-web
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8080:80"
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend
+      # - flutter-web

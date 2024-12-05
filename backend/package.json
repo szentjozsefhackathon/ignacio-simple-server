@@ -1,10 +1,10 @@
 {
-    "name": "simple-node-server",
+    "name": "igancio-backend-server",
     "version": "1.0.0",
     "description": "A simple Node.js server to serve JSON data and media files.",
-    "main": "server/src/server.js",
+    "main": "src/server.js",
     "scripts": {
-      "start": "NODE_ENV=production node server/src/server.js",
+      "start": "NODE_ENV=production node src/server.js",
       "dev": "nodemon src/server.js"
     },
     "dependencies": {
