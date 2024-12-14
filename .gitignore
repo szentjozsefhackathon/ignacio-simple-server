@@ -28,7 +28,8 @@ certs/
 *.key
 
 # Images and voice files
-public/
+frontend/public/*
+!frontend/public/index.html
 *.png
 *.jpg
 *.jpeg

@@ -17,7 +17,7 @@ This is a simple Node.js server implementation to serve JSON database, images, a
 
 3. Start the servers with docker-compose:
    ```sh
-   docker-compose build -d
+   docker-compose up -d
    ```
 
 4. The servers will be running at [`http://localhost:3000`](http://localhost:3000).
