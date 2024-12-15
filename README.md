@@ -28,3 +28,11 @@ This is a simple Node.js server implementation to serve JSON database, images, a
 ## License
 
 This project is licensed under the MIT License.
+
+## Generate certs (macOs)
+
+```shell
+cd backend
+mkdir certs                                                     
+openssl req -x509 -newkey rsa:2048 -keyout certs/server.key -out certs/server.cert -days 365 -nodes
+```
