@@ -15,6 +15,7 @@ WORKDIR /app
 RUN flutter doctor -v
 
 # Clone the Flutter app repository
+RUN echo "Cloning Ignacio Prayers Flutter Application"
 RUN git clone https://github.com/szentjozsefhackathon/ignacio_prayers_flutter_application.git
 WORKDIR /app/ignacio_prayers_flutter_application
 

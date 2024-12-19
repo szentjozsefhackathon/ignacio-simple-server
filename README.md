@@ -20,7 +20,7 @@ This is a simple Node.js server implementation to serve JSON database, images, a
    docker-compose up -d
    ```
 
-4. The servers will be running at [`http://localhost:3000`](http://localhost:3000).
+4. The servers will be running at [`http://localhost`](http://localhost).
  - landing page under /
  - API under /api
  - flutter web under /flutter
