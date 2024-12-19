@@ -230,7 +230,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Megérintődni Mi ragad meg leginkább, hol érzek személyes megszólítottságot – lehet ez egy szó, egy mondat, egy személy, esetleg egy asszociáció: magam vagyok a háló, ami felfogja a belső rezdüléseket. ",
+            "description": "Megérintődni Mi ragad meg leginkább, hol érzek személyes megszólítottságot – lehet ez egy szó, egy mondat, egy személy, esetleg egy asszociáció: magam vagyok a háló, ami felfogja a belső rezdüléseket.",
             "voices": [
               "vilagos5noi.mp3",
               "vilagos5ferfi.mp3",
@@ -240,7 +240,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Beszélgetés Istennel Követem a nyomokat: miért foglalkoztat épp ez a gondolat olyannyira? A válasz megmutatja, hol vagyok most. Félelmeimet, kívánságaimat, vágyaimat teszi tudatossá. Mindezeket Isten elé viszem – kérve, dicsőítve vagy akár panaszkodva. És figyelem a válaszát. ",
+            "description": "Beszélgetés Istennel Követem a nyomokat: miért foglalkoztat épp ez a gondolat olyannyira? A válasz megmutatja, hol vagyok most. Félelmeimet, kívánságaimat, vágyaimat teszi tudatossá. Mindezeket Isten elé viszem – kérve, dicsőítve vagy akár panaszkodva. És figyelem a válaszát.",
             "voices": [
               "vilagos6noi.mp3",
               "vilagos6ferfi.mp3",
@@ -392,7 +392,7 @@
             "type": "FIX"
           },
           {
-            "description": "A világosság pillanata A stressz és feszültség eltűnik belőlem. A látásomat felesleges dolgok már nem akadályozzák. Szabadon tudok ismét gondolkodni. És ebben a nyugodt pillanatban újra megtalálom az utam irányát. Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled, áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus. Asszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen. ",
+            "description": "A világosság pillanata A stressz és feszültség eltűnik belőlem. A látásomat felesleges dolgok már nem akadályozzák. Szabadon tudok ismét gondolkodni. És ebben a nyugodt pillanatban újra megtalálom az utam irányát. Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled, áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus. Asszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen.",
             "voices": [
               "eletem6noi.mp3",
               "eletem6ferfi.mp3",
@@ -623,7 +623,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Te mit mondanál? Isten elé helyezem, amit észrevettem. Hálát adok és kéréseket fogalmazok meg. Felteszem a kérdést: „És Te mit mondanál?” ",
+          "description": "Te mit mondanál? Isten elé helyezem, amit észrevettem. Hálát adok és kéréseket fogalmazok meg. Felteszem a kérdést: „És Te mit mondanál?”",
           "voices": [
             "esti5noi.mp3",
             "esti5ferfi.mp3",
@@ -833,7 +833,7 @@
           "type": "FLEX"
         },
         {
-          "description": "3. lépés: Józan érveket keresek az alternatívák mellett, ill. ellen. Különös figyelmet szentelek annak, hogy a saját erőmet figyelembe véve határozzam meg, mit lehet értelmesen és erkölcsösen megtenni. Segítenek az ilyen kérdések: Mi van a korábbi fontos döntéseimmel összhangban? Mi illeszkedik a feladataimhoz? Hogyan döntene Jézus vagy más, számomra fontos személy? ",
+          "description": "3. lépés: Józan érveket keresek az alternatívák mellett, ill. ellen. Különös figyelmet szentelek annak, hogy a saját erőmet figyelembe véve határozzam meg, mit lehet értelmesen és erkölcsösen megtenni. Segítenek az ilyen kérdések: Mi van a korábbi fontos döntéseimmel összhangban? Mi illeszkedik a feladataimhoz? Hogyan döntene Jézus vagy más, számomra fontos személy?",
           "voices": [
             "lelkek3noi.mp3",
             "lelkek3ferfi.mp3",
@@ -936,7 +936,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Mit jelent számomra az az eredmény, amit kitűztünk magunknak? A műhely végén megkeresem, hogyan kapcsolódnak a közösen feldolgozottak a személyemhez és helyzetemhez. Mi a következő konkrét lépés számomra? Mit fogok tudatosan elhagyni és mit fogok újrakezdeni? ",
+          "description": "Mit jelent számomra az az eredmény, amit kitűztünk magunknak? A műhely végén megkeresem, hogyan kapcsolódnak a közösen feldolgozottak a személyemhez és helyzetemhez. Mi a következő konkrét lépés számomra? Mit fogok tudatosan elhagyni és mit fogok újrakezdeni?",
           "voices": [
             "reflekt5noi.mp3",
             "reflekt5ferfi.mp3",
