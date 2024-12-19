@@ -3,7 +3,7 @@
     "prayers": [
       {
         "title": "Ignáci szemlélődés",
-        "description": "Az ima előkészítése (5-10 perc):   Elolvasom az evangéliumi szakaszt legalább kétszer - az értelmemmel és a szívemmel. Ami megérintett a szövegből, azzal kapcsolatban megfogalmazok egy kérést, ami egyszerre kapcsolódik a szöveghez és az életemhez. Ezt csak Isten ajándékozhatja nekem az Ő kegyelmeként. Eldöntöm, hol és mennyi időt (20-30-60 perc) szeretnék imában tölteni, és ima közben nem változtatok ezen.",
+        "description": "Az ima előkészítése (5-10 perc): Elolvasom az evangéliumi szakaszt legalább kétszer - az értelmemmel és a szívemmel. Ami megérintett a szövegből, azzal kapcsolatban megfogalmazok egy kérést, ami egyszerre kapcsolódik a szöveghez és az életemhez. Ezt csak Isten ajándékozhatja nekem az Ő kegyelmeként. Eldöntöm, hol és mennyi időt (20-30-60 perc) szeretnék imában tölteni, és ima közben nem változtatok ezen.",
         "image": "ignaciszemlelodes.jpg",
         "voice_options": [
           "Női",
@@ -84,7 +84,7 @@
             "type": "FIX"
           },
           {
-            "description": "Visszatekintés (8-10 perc, lehetőleg írásban):         Mely szó, mondat, kép hatott rám leginkább?       Milyen belső megmozdulásokat tapasztaltam?        Mi ragadott meg Jézus személyében?        Mit ismertem fel Istenről és önmagamról az imában?        Milyen kegyelmet kértem és kaptam?        Mire szeretnék visszatérni?",
+            "description": "Visszatekintés (8-10 perc, lehetőleg írásban): Mely szó, mondat, kép hatott rám leginkább? Milyen belső megmozdulásokat tapasztaltam? Mi ragadott meg Jézus személyében? Mit ismertem fel Istenről és önmagamról az imában? Milyen kegyelmet kértem és kaptam? Mire szeretnék visszatérni?",
             "voices": [
               "ignaci9noi.mp3",
               "ignaci9ferfi2.mp3"
@@ -96,7 +96,7 @@
       },
       {
         "title": "Ritmikus ima",
-        "description": "Az ima előkészítése (5-10 perc):   Elolvasom a szentírási szakaszt legalább kétszer, figyelve arra, hogy mely szavak, mondatok, képek érintettek meg belőle. Kiválasztok belőlük egyet-kettőt; ezeket esetleg le is írom magamnak. Ami megérintett a szövegből, azzal kapcsolatban megfogalmazok egy kérést, ami egyszerre kapcsolódik a szöveghez és az életemhez. Ezt csak Isten ajándékozhatja nekem az Ő kegyelmeként. Eldöntöm, hol és mennyi időt (20-30-60 perc) szeretnék imában tölteni, és ima közben nem változtatok ezen.",
+        "description": "Az ima előkészítése (5-10 perc): Elolvasom a szentírási szakaszt legalább kétszer, figyelve arra, hogy mely szavak, mondatok, képek érintettek meg belőle. Kiválasztok belőlük egyet-kettőt; ezeket esetleg le is írom magamnak. Ami megérintett a szövegből, azzal kapcsolatban megfogalmazok egy kérést, ami egyszerre kapcsolódik a szöveghez és az életemhez. Ezt csak Isten ajándékozhatja nekem az Ő kegyelmeként. Eldöntöm, hol és mennyi időt (20-30-60 perc) szeretnék imában tölteni, és ima közben nem változtatok ezen.",
         "image": "ritmikusimamod.jpg",
         "voice_options": [
           "Női",
@@ -168,7 +168,7 @@
             "type": "FIX"
           },
           {
-            "description": "Visszatekintés (8-10 perc, lehetőleg írásban):                Mely szó, mondat, kép hatott rám leginkább?        Milyen belső megmozdulásokat tapasztaltam?       Mit ismertem fel Istenről és önmagamról az imában?        Milyen kegyelmet kértem és kaptam?        Mire szeretnék visszatérni?",
+            "description": "Visszatekintés (8-10 perc, lehetőleg írásban): Mely szó, mondat, kép hatott rám leginkább? Milyen belső megmozdulásokat tapasztaltam? Mit ismertem fel Istenről és önmagamról az imában? Milyen kegyelmet kértem és kaptam? Mire szeretnék visszatérni?",
             "voices": [
               "ritmikus8noi.mp3",
               "ritmikus8ferfi2.mp3"
@@ -180,7 +180,7 @@
       },
       {
         "title": "Világosság",
-        "description": "Nem könnyű hűségesnek maradni önmagunkhoz. Sok                  minden megzavarhatja a tisztánlátásunkat azokban a                  dolgokban, melyek meghatározzák lényünket és életünket.                  Ha elvesztettem a pontos irányt, vissza kell találnom a                  saját utamhoz. A Biblia ebben nagyon értékes iránytű                  számunkra.",
+        "description": "Nem könnyű hűségesnek maradni önmagunkhoz. Sok minden megzavarhatja a tisztánlátásunkat azokban a dolgokban, melyek meghatározzák lényünket és életünket. Ha elvesztettem a pontos irányt, vissza kell találnom a saját utamhoz. A Biblia ebben nagyon értékes iránytű számunkra.",
         "image": "vilagossag.jpg",
         "voice_options": [
           "Női",
@@ -190,7 +190,7 @@
         "minTimeInMinutes": 20,
         "steps": [
           {
-            "description": "„Előtted állhatok. Vársz rám.”         Időt szakítok saját magam számára.        Az imával Istenre hangolódom, nyugodtan és elegendő időt szentelve a fohászra. Úgy állok Isten előtt, ahogy most ebben a pillanatban        vagyok.",
+            "description": "„Előtted állhatok. Vársz rám.” Időt szakítok saját magam számára. Az imával Istenre hangolódom, nyugodtan és elegendő időt szentelve a fohászra. Úgy állok Isten előtt, ahogy most ebben a pillanatban vagyok.",
             "voices": [
               "vilagos1noi.mp3",
               "vilagos1ferfi.mp3",
@@ -200,7 +200,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Megnyílni          Észreveszem vágyaimat, sóvárgásomat. Mit kívánok most        a magam számára, mit remélek az életemtől? Megnyílok az előtt,        amit Isten mondani akar nekem.",
+            "description": "Megnyílni Észreveszem vágyaimat, sóvárgásomat. Mit kívánok most a magam számára, mit remélek az életemtől? Megnyílok az előtt, amit Isten mondani akar nekem.",
             "voices": [
               "vilagos2noi.mp3",
               "vilagos2ferfi.mp3",
@@ -210,7 +210,7 @@
             "type": "FLEX"
           },
           {
-            "description": "A Bibliát hagyom beszélni          Hogy is volt ez Jónással és a cethallal?       Hogyan történt a béna gyógyulása? Mi történt, amikor Jézus megjelent a tanítványainak? Szabadon választok egy helyet a Bibliából,        felolvasom hangosan, majd halkan. Elidőzöm azoknál a szavaknál,        amelyek leginkább megszólítanak.",
+            "description": "A Bibliát hagyom beszélni Hogy is volt ez Jónással és a cethallal? Hogyan történt a béna gyógyulása? Mi történt, amikor Jézus megjelent a tanítványainak? Szabadon választok egy helyet a Bibliából, felolvasom hangosan, majd halkan. Elidőzöm azoknál a szavaknál, amelyek leginkább megszólítanak.",
             "voices": [
               "vilagos3noi.mp3",
               "vilagos3ferfi.mp3",
@@ -220,7 +220,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Nézni, hallani, szagolni, érezni          Elmélyülök az Írásban, hagyom a       gondolataimat szabadon szárnyalni. Minden érzékemmel kapcsolódom a szöveghez. Belehelyezkedem egyes szereplők helyzetébe,        érzékelem a részleteket, a párbeszédeket újból, a saját szavaimmal        elmondom, tudatosítom a hangulatot és az érzelmeket. Belépek a        történetbe.",
+            "description": "Nézni, hallani, szagolni, érezni Elmélyülök az Írásban, hagyom a gondolataimat szabadon szárnyalni. Minden érzékemmel kapcsolódom a szöveghez. Belehelyezkedem egyes szereplők helyzetébe, érzékelem a részleteket, a párbeszédeket újból, a saját szavaimmal elmondom, tudatosítom a hangulatot és az érzelmeket. Belépek a történetbe.",
             "voices": [
               "vilagos4noi.mp3",
               "vilagos4ferfi.mp3",
@@ -230,7 +230,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Megérintődni          Mi ragad meg leginkább, hol érzek személyes megszólítottságot – lehet ez egy szó, egy mondat, egy        személy, esetleg egy asszociáció: magam vagyok a háló,        ami felfogja a belső rezdüléseket. ",
+            "description": "Megérintődni Mi ragad meg leginkább, hol érzek személyes megszólítottságot – lehet ez egy szó, egy mondat, egy személy, esetleg egy asszociáció: magam vagyok a háló, ami felfogja a belső rezdüléseket. ",
             "voices": [
               "vilagos5noi.mp3",
               "vilagos5ferfi.mp3",
@@ -240,7 +240,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Beszélgetés Istennel          Követem a nyomokat: miért foglalkoztat épp        ez a gondolat olyannyira? A válasz megmutatja, hol vagyok most.        Félelmeimet, kívánságaimat, vágyaimat teszi tudatossá. Mindezeket Isten elé viszem – kérve, dicsőítve vagy akár panaszkodva. És        figyelem a válaszát. ",
+            "description": "Beszélgetés Istennel Követem a nyomokat: miért foglalkoztat épp ez a gondolat olyannyira? A válasz megmutatja, hol vagyok most. Félelmeimet, kívánságaimat, vágyaimat teszi tudatossá. Mindezeket Isten elé viszem – kérve, dicsőítve vagy akár panaszkodva. És figyelem a válaszát. ",
             "voices": [
               "vilagos6noi.mp3",
               "vilagos6ferfi.mp3",
@@ -250,7 +250,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Reflektálva tovább menni          Az imára szánt időm végén azt keresem,        hogy éreztem ez idő alatt magam. Esetleg        felírok egy-két gondolatot és megújultan fordulok        az élet felé.",
+            "description": "Reflektálva tovább menni Az imára szánt időm végén azt keresem, hogy éreztem ez idő alatt magam. Esetleg felírok egy-két gondolatot és megújultan fordulok az élet felé.",
             "voices": [
               "vilagos7noi.mp3",
               "vilagos7ferfi.mp3",
@@ -261,14 +261,15 @@
           }
         ]
       }
-    ]  
+    ]
   },
-  {"title": "Meditációs imák",
+  {
+    "title": "Meditációs imák",
     "image": "meditaciosima.jpg",
     "prayers": [
       {
         "title": "Belső figyelem",
-        "description": "… ha a mindennapok rohanásában már nem tudom, hol áll                  a fejem,                  …ha a belső irányultságomhoz való kapcsolódást elvesztem,                  … ha Isten halk hangját nem hallom már,                  akkor itt az idő, hogy kikapcsoljak.",
+        "description": "… ha a mindennapok rohanásában már nem tudom, hol áll a fejem, …ha a belső irányultságomhoz való kapcsolódást elvesztem, … ha Isten halk hangját nem hallom már, akkor itt az idő, hogy kikapcsoljak.",
         "image": "belsofigyelem.jpg",
         "voice_options": [
           "Női",
@@ -278,7 +279,7 @@
         "minTimeInMinutes": 15,
         "steps": [
           {
-            "description": "Leülök        kényelmesen és figyelem a légzésemet,        ahogy ki- és beáramlik. Teljesen ITT és MOST.",
+            "description": "Leülök kényelmesen és figyelem a légzésemet, ahogy ki- és beáramlik. Teljesen ITT és MOST.",
             "voices": [
               "belso1noi.mp3",
               "belso1ferfi.mp3",
@@ -288,7 +289,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Most nincs más tennivalóm        és a gondolatokat, amelyek megrohannak,        mint egy vad majomcsorda, elengedem,        és azt mondom: MOST NEM!",
+            "description": "Most nincs más tennivalóm és a gondolatokat, amelyek megrohannak, mint egy vad majomcsorda, elengedem, és azt mondom: MOST NEM!",
             "voices": [
               "belso2noi.mp3",
               "belso2ferfi.mp3",
@@ -298,7 +299,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Figyelmesen és értékelés nélkül        veszem tudomásul, ami velem és bennem történik.        Érzések és gondolatok, mint a felhők, vonulnak át rajtam.",
+            "description": "Figyelmesen és értékelés nélkül veszem tudomásul, ami velem és bennem történik. Érzések és gondolatok, mint a felhők, vonulnak át rajtam.",
             "voices": [
               "belso3noi.mp3",
               "belso3ferfi.mp3",
@@ -308,7 +309,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Összeszedett vagyok, de higgadt        Nem kell mást tennem, mint egyszerűen csak ülni        és lélegezni. Itt vagyok!",
+            "description": "Összeszedett vagyok, de higgadt Nem kell mást tennem, mint egyszerűen csak ülni és lélegezni. Itt vagyok!",
             "voices": [
               "belso4noi.mp3",
               "belso4ferfi.mp3",
@@ -318,7 +319,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Kapcsolatba lépve önmagammal        Isten halk hangja meg tud érinteni.",
+            "description": "Kapcsolatba lépve önmagammal Isten halk hangja meg tud érinteni.",
             "voices": [
               "belso5noi.mp3",
               "belso5ferfi.mp3",
@@ -331,7 +332,7 @@
       },
       {
         "title": "Életem ritmusának megtalálása",
-        "description": "Amikor a mindennapokban elvesztem lábam alól a talajt,                  fontos, hogy támaszt találjak. Ez az igazán jó pillanat a rózsafüzér imádkozására. A légzés ritmusában a szív megnyugszik. Ez is egy találkozás Istennel.",
+        "description": "Amikor a mindennapokban elvesztem lábam alól a talajt, fontos, hogy támaszt találjak. Ez az igazán jó pillanat a rózsafüzér imádkozására. A légzés ritmusában a szív megnyugszik. Ez is egy találkozás Istennel.",
         "image": "eletemritmusa.jpg",
         "voice_options": [
           "Női",
@@ -341,7 +342,7 @@
         "minTimeInMinutes": 15,
         "steps": [
           {
-            "description": "Teret adok magamnak        Elsőként elengedem a mindennapokat.        Mindegy, hol vagyok – irodában, otthon, a repülőtéren − visszavonulok        és személyes teret teremtek magamnak.",
+            "description": "Teret adok magamnak Elsőként elengedem a mindennapokat. Mindegy, hol vagyok – irodában, otthon, a repülőtéren − visszavonulok és személyes teret teremtek magamnak.",
             "voices": [
               "eletem1noi.mp3",
               "eletem1ferfi.mp3",
@@ -351,7 +352,7 @@
             "type": "FIX"
           },
           {
-            "description": "Félórányi lazítás        A hagyományos elemeket alkalmazva rózsafüzért imádkozom. Általában ez így zajlik: keresztvetéssel kezdődik, utána ötször ismétlődve tíz        Üdvözlégy és egy Miatyánk.        Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled.        Áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.",
+            "description": "Félórányi lazítás A hagyományos elemeket alkalmazva rózsafüzért imádkozom. Általában ez így zajlik: keresztvetéssel kezdődik, utána ötször ismétlődve tíz Üdvözlégy és egy Miatyánk. Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled. Áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.",
             "voices": [
               "eletem2noi.mp3",
               "eletem2ferfi.mp3",
@@ -361,7 +362,7 @@
             "type": "FIX"
           },
           {
-            "description": "Semmi nem zavarja az elmélyülést        Ez az ima meditatív eszközként működik. A légzésem ritmusa a beszédem ritmusa is. A szavak egyenletessége a lelkemet megnyugtatja.",
+            "description": "Semmi nem zavarja az elmélyülést Ez az ima meditatív eszközként működik. A légzésem ritmusa a beszédem ritmusa is. A szavak egyenletessége a lelkemet megnyugtatja.",
             "voices": [
               "eletem3noi.mp3",
               "eletem3ferfi.mp3",
@@ -371,7 +372,7 @@
             "type": "FIX"
           },
           {
-            "description": "Eltávolodom…        Az imában az aggodalmaim és nehézségeim eltávolodnak tőlem. A        külvilág egyszer csak nem létezik többé.        A rózsafüzér a kezemben segít eltávolodni. Szabaddá tesz.",
+            "description": "Eltávolodom… Az imában az aggodalmaim és nehézségeim eltávolodnak tőlem. A külvilág egyszer csak nem létezik többé. A rózsafüzér a kezemben segít eltávolodni. Szabaddá tesz.",
             "voices": [
               "eletem4noi.mp3",
               "eletem4ferfi.mp3",
@@ -381,7 +382,7 @@
             "type": "FIX"
           },
           {
-            "description": "… és mégis biztonságban vagyok        Nem üres kézzel állok itt, a rózsafüzér stabilitást ad.        Minden gyöngy egy lépéssel tovább vezet az elmélyülésben.",
+            "description": "… és mégis biztonságban vagyok Nem üres kézzel állok itt, a rózsafüzér stabilitást ad. Minden gyöngy egy lépéssel tovább vezet az elmélyülésben.",
             "voices": [
               "eletem5noi.mp3",
               "eletem5ferfi.mp3",
@@ -391,7 +392,7 @@
             "type": "FIX"
           },
           {
-            "description": "A világosság pillanata        A stressz és feszültség eltűnik belőlem. A látásomat        felesleges dolgok már nem akadályozzák. Szabadon tudok ismét gondolkodni. És ebben a nyugodt pillanatban újra        megtalálom az utam irányát.        Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled, áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus. Asszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen. ",
+            "description": "A világosság pillanata A stressz és feszültség eltűnik belőlem. A látásomat felesleges dolgok már nem akadályozzák. Szabadon tudok ismét gondolkodni. És ebben a nyugodt pillanatban újra megtalálom az utam irányát. Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled, áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus. Asszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen. ",
             "voices": [
               "eletem6noi.mp3",
               "eletem6ferfi.mp3",
@@ -401,7 +402,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Kiegyensúlyozottan és megerősödve         A bennem lévő csendből kilépve újra felveszem életem       ritmusát.",
+            "description": "Kiegyensúlyozottan és megerősödve A bennem lévő csendből kilépve újra felveszem életem ritmusát.",
             "voices": [
               "eletem7noi.mp3",
               "eletem7ferfi.mp3",
@@ -414,7 +415,7 @@
       },
       {
         "title": "A Szív imája",
-        "description": "A szív imája egy spirituális gyakorlat, amely eltökéltséget és                  kitartást igényel. Kiegyenesúlyozottságot ad és megszabadít                  a nyugtalanságtól – egy egész életen át tartó gyakorlás, hogy                  nyitott legyél magad felé, az életed felé, embertársaid és Isten                  felé.                 Keress egy helyet, ahol nyugalomban lehetsz. Állítsd be az órádat 15                  percre (később akár 20 vagy 25 perc is lehet).",
+        "description": "A szív imája egy spirituális gyakorlat, amely eltökéltséget és kitartást igényel. Kiegyenesúlyozottságot ad és megszabadít a nyugtalanságtól – egy egész életen át tartó gyakorlás, hogy nyitott legyél magad felé, az életed felé, embertársaid és Isten felé. Keress egy helyet, ahol nyugalomban lehetsz. Állítsd be az órádat 15 percre (később akár 20 vagy 25 perc is lehet).",
         "image": "szivimaja.jpg",
         "voice_options": [
           "Női",
@@ -424,7 +425,7 @@
         "minTimeInMinutes": 15,
         "steps": [
           {
-            "description": "Ülj egy kényelmes padra vagy székre, de ne dőlj a háttámlának. A        tartásod egyenes legyen, kissé döntsd előre a fejed. A vállaidat tartsd        lazán. Tedd egymásba a kezeidet nyitott tenyérrel felfelé vagy pihentesd        a combodon. Fontos, hogy a tested olyan nyugalmi helyzetben legyen,        amelyben figyelmesen jelen tudsz lenni.",
+            "description": "Ülj egy kényelmes padra vagy székre, de ne dőlj a háttámlának. A tartásod egyenes legyen, kissé döntsd előre a fejed. A vállaidat tartsd lazán. Tedd egymásba a kezeidet nyitott tenyérrel felfelé vagy pihentesd a combodon. Fontos, hogy a tested olyan nyugalmi helyzetben legyen, amelyben figyelmesen jelen tudsz lenni.",
             "voices": [
               "sziv2noi.mp3",
               "sziv2ferfi.mp3",
@@ -434,7 +435,7 @@
             "type": "FIX"
           },
           {
-            "description": "Csukd be a szemedet vagy félig lehunyt szemmel nézz magad elé egy        pontra.",
+            "description": "Csukd be a szemedet vagy félig lehunyt szemmel nézz magad elé egy pontra.",
             "voices": [
               "sziv3noi.mp3",
               "sziv3ferfi.mp3",
@@ -454,7 +455,7 @@
             "type": "FIX"
           },
           {
-            "description": "Figyelj a légzésedre, érezd, ahogy a levegő ki és beáramlik a testedbe.        Ne befolyásold a légzésedet. Találd meg önmagadat a lélegzetvételed        rezdüléseiben, semmi más nem fontos most. Tekints rá érzéseid és        gondolataid mozgására, fogadd el a felmerülő érzéseket és gondolatokat,        majd engedd el őket.",
+            "description": "Figyelj a légzésedre, érezd, ahogy a levegő ki és beáramlik a testedbe. Ne befolyásold a légzésedet. Találd meg önmagadat a lélegzetvételed rezdüléseiben, semmi más nem fontos most. Tekints rá érzéseid és gondolataid mozgására, fogadd el a felmerülő érzéseket és gondolatokat, majd engedd el őket.",
             "voices": [
               "sziv5noi.mp3",
               "sziv5ferfi.mp3",
@@ -464,7 +465,7 @@
             "type": "FIX"
           },
           {
-            "description": "A légzésedbe helyezz egy fohászt: „Uram, Jézus Krisztus, könyörülj        rajtam!” Ismételd ezt újra és újra a légzésed ritmusában. Vagy mondd        egyszerűen a belégzéskor: „Krisztus” és a kilégzéskor: „Jézus”.",
+            "description": "A légzésedbe helyezz egy fohászt: „Uram, Jézus Krisztus, könyörülj rajtam!” Ismételd ezt újra és újra a légzésed ritmusában. Vagy mondd egyszerűen a belégzéskor: „Krisztus” és a kilégzéskor: „Jézus”.",
             "voices": [
               "sziv6noi.mp3",
               "sziv6ferfi.mp3",
@@ -474,7 +475,7 @@
             "type": "FIX"
           },
           {
-            "description": "Ha elkalandoznak is a gondolataid, térj mindig vissza a légzéshez és a        fohász szavaihoz. Ez vonatkozik arra is, ha Istenről gondolkodnál, vagy        gondolataid olyan jó dolgok körül járnak, amiket megtehetnél: engedd        el őket, mert ezek még nem a valóság, amit a szív imájában keresel. A        légzés és a fohász szavai jelentik a kötelet, amelybe megkapaszkodhatsz,        amely visszahúz és segít, hogy az éber jelenlétbe visszatalálj. Így hagyatkozz        újra és újra a benned rejlő Isten közelségére.",
+            "description": "Ha elkalandoznak is a gondolataid, térj mindig vissza a légzéshez és a fohász szavaihoz. Ez vonatkozik arra is, ha Istenről gondolkodnál, vagy gondolataid olyan jó dolgok körül járnak, amiket megtehetnél: engedd el őket, mert ezek még nem a valóság, amit a szív imájában keresel. A légzés és a fohász szavai jelentik a kötelet, amelybe megkapaszkodhatsz, amely visszahúz és segít, hogy az éber jelenlétbe visszatalálj. Így hagyatkozz újra és újra a benned rejlő Isten közelségére.",
             "voices": [
               "sziv7noi.mp3",
               "sziv7ferfi.mp3",
@@ -484,7 +485,7 @@
             "type": "FLEX"
           },
           {
-            "description": "Amikor az imaidőd végére érsz, áhítatosan hajolj meg, és használd ki        a megszerzett békességet, pl. egy Miatyánk imádkozására vagy olvass el        egy rövid szentírási részt.",
+            "description": "Amikor az imaidőd végére érsz, áhítatosan hajolj meg, és használd ki a megszerzett békességet, pl. egy Miatyánk imádkozására vagy olvass el egy rövid szentírási részt.",
             "voices": [
               "sziv8noi.mp3",
               "sziv8ferfi.mp3",
@@ -494,7 +495,7 @@
             "type": "FIX"
           },
           {
-            "description": "Ismételd ezt a gyakorlatot naponta egyszer vagy kétszer, lehetőleg olyan        időpontokban, amikor éber vagy és jól tudsz koncentrálni.",
+            "description": "Ismételd ezt a gyakorlatot naponta egyszer vagy kétszer, lehetőleg olyan időpontokban, amikor éber vagy és jól tudsz koncentrálni.",
             "voices": [
             ],
             "timeInSeconds": 20,
@@ -502,14 +503,14 @@
           }
         ]
       }
-     ]  
+    ]
   },
-  {"title": "Examen",
+{"title": "Examen",
   "image": "examen.jpg",
   "prayers": [
     {
       "title": "Lelki utamon",
-      "description": "Miért bosszantanak egyes dolgok és mások miért okoznak                  örömet? Miért cipelek magammal néhány dolgot napokig,                  míg másokat hamar elengedek? Aki ezeket a kérdéseket a saját mindennapjai megélése során                  felteszi magának, hamar egy „vakfoltot” fedez fel magában.                  Egyáltalán nem olyan könnyű megfejteni azt, mi foglalkoztat                  bennünket életünk során. Ez a gyakorlat segít a mindennapokat egy magasabb összefüggésbe helyezni és közelebb hozza a                  személyt önmagához, a világhoz és Istenhez is.                  A gyakorlat alkalmazható a lelkivezetésben is.",
+      "description": "Miért bosszantanak egyes dolgok és mások miért okoznak örömet? Miért cipelek magammal néhány dolgot napokig, míg másokat hamar elengedek? Aki ezeket a kérdéseket a saját mindennapjai megélése során felteszi magának, hamar egy „vakfoltot” fedez fel magában. Egyáltalán nem olyan könnyű megfejteni azt, mi foglalkoztat bennünket életünk során. Ez a gyakorlat segít a mindennapokat egy magasabb összefüggésbe helyezni és közelebb hozza a személyt önmagához, a világhoz és Istenhez is. A gyakorlat alkalmazható a lelkivezetésben is.",
       "image": "lelkiutamon.jpg",
       "voice_options": [
         "Női",
@@ -519,7 +520,7 @@
       "minTimeInMinutes": 15,
       "steps": [
         {
-          "description": "Visszaemlékezés és belehelyezkedés        Megpróbálom pontosan felidézni a helyzetet, ami foglalkoztat: Ki volt        ott? Miről volt szó? Milyen helyzetben voltam én – és milyen helyzetben        voltak a többiek?",
+          "description": "Visszaemlékezés és belehelyezkedés Megpróbálom pontosan felidézni a helyzetet, ami foglalkoztat: Ki volt ott? Miről volt szó? Milyen helyzetben voltam én – és milyen helyzetben voltak a többiek?",
           "voices": [
             "lelki1noi.mp3",
             "lelki1ferfi.mp3",
@@ -529,7 +530,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Események szavakba foglalása        Egy beszélgetés során saját magam számára egy jegyzetfüzetbe felírom a        megélt eseményeket.        Eközben a külső és a belső történésekre is tekintek: Mi történt pontosan?        Hogyan éreztem magam ebben a helyzetben?",
+          "description": "Események szavakba foglalása Egy beszélgetés során saját magam számára egy jegyzetfüzetbe felírom a megélt eseményeket. Eközben a külső és a belső történésekre is tekintek: Mi történt pontosan? Hogyan éreztem magam ebben a helyzetben?",
           "voices": [
             "lelki2noi.mp3",
             "lelki2ferfi.mp3",
@@ -539,7 +540,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Rátekintés és ízlelés        Rátekintek a részletekre, melyeket felírtam magamnak és még egyszer        átélem őket. Mi rejtőzik a megéltek mögött? Milyen hatással van ez a        mostani élethelyzetemre?",
+          "description": "Rátekintés és ízlelés Rátekintek a részletekre, melyeket felírtam magamnak és még egyszer átélem őket. Mi rejtőzik a megéltek mögött? Milyen hatással van ez a mostani élethelyzetemre?",
           "voices": [
             "lelki3noi.mp3",
             "lelki3ferfi.mp3",
@@ -549,7 +550,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Isten, a világ és én        Megkérdem magamtól: Mit mond ez nekem Istennel való kapcsolatom        vonatkozásában? Mit jelez embertársaimmal való kapcsolatomról, és mit        mond saját magamról?",
+          "description": "Isten, a világ és én Megkérdem magamtól: Mit mond ez nekem Istennel való kapcsolatom vonatkozásában? Mit jelez embertársaimmal való kapcsolatomról, és mit mond saját magamról?",
           "voices": [
             "lelki4noi.mp3",
             "lelki4ferfi.mp3",
@@ -559,7 +560,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Belső tapasztalatomat Isten előtt kifejezni        Mindent, amit az egyéni lépésekben megismertem, Isten elé hozom.        Aggodalmak, harag, csalódások, remények és vágyak: kimondom, ami        foglalkoztat. Így mindennek teret adok, ami bennem zajlik. Isten elé hozva újra magamra tekintek és megízlelem, mi zajlik le bennem és milyen        visszhang kél bensőmben.",
+          "description": "Belső tapasztalatomat Isten előtt kifejezni Mindent, amit az egyéni lépésekben megismertem, Isten elé hozom. Aggodalmak, harag, csalódások, remények és vágyak: kimondom, ami foglalkoztat. Így mindennek teret adok, ami bennem zajlik. Isten elé hozva újra magamra tekintek és megízlelem, mi zajlik le bennem és milyen visszhang kél bensőmben.",
           "voices": [
             "lelki5noi.mp3",
             "lelki5ferfi.mp3",
@@ -582,7 +583,7 @@
       "minTimeInMinutes": 15,
       "steps": [
         {
-          "description": "Elcsendesedek        Választok egy kényelmes helyet, kizárom a zajokat és zavaró külső ingereket, időt hagyok magamnak és az érzéseimnek. A csendben magamra        tekintek és tudatosítom, hogy Isten is rámtekint.",
+          "description": "Elcsendesedek Választok egy kényelmes helyet, kizárom a zajokat és zavaró külső ingereket, időt hagyok magamnak és az érzéseimnek. A csendben magamra tekintek és tudatosítom, hogy Isten is rámtekint.",
           "voices": [
             "esti1noi.mp3",
             "esti1ferfi.mp3",
@@ -592,7 +593,7 @@
           "type": "FIX"
         },
         {
-          "description": "Mit éltem ma át?        Felidézem a napomat és végigtekintek az eseményeken. Figyelmesen        és minősítés nélkül. Rápillantok azokra a dolgokra, amelyek különösen        megmozgattak: élményekre, találkozásokra vagy döntésekre.",
+          "description": "Mit éltem ma át? Felidézem a napomat és végigtekintek az eseményeken. Figyelmesen és minősítés nélkül. Rápillantok azokra a dolgokra, amelyek különösen megmozgattak: élményekre, találkozásokra vagy döntésekre.",
           "voices": [
             "esti2noi.mp3",
             "esti2ferfi.mp3",
@@ -602,7 +603,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Mi az, ami még a nap végén is felkelti a figyelmemet?        Miért érintett meg? Mi is történt ott valójában? Teret adok belső megmozdulásaimnak: gondolataimnak, érzelmeimnek és mindennek, ami        megérintett a nap folyamán és hatással van rám még most is.",
+          "description": "Mi az, ami még a nap végén is felkelti a figyelmemet? Miért érintett meg? Mi is történt ott valójában? Teret adok belső megmozdulásaimnak: gondolataimnak, érzelmeimnek és mindennek, ami megérintett a nap folyamán és hatással van rám még most is.",
           "voices": [
             "esti3noi.mp3",
             "esti3ferfi.mp3",
@@ -612,7 +613,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Mi sarkall engem?        Átgondolom, mi vezette a cselekedeteimet: Mi motivált?        Mi ösztönzött és mi gátolt?        Minek mentén élem az életemet?",
+          "description": "Mi sarkall engem? Átgondolom, mi vezette a cselekedeteimet: Mi motivált? Mi ösztönzött és mi gátolt? Minek mentén élem az életemet?",
           "voices": [
             "esti4noi.mp3",
             "esti4ferfi.mp3",
@@ -622,7 +623,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Te mit mondanál?        Isten elé helyezem, amit észrevettem. Hálát adok és kéréseket fogalmazok meg. Felteszem a kérdést: „És Te mit mondanál?” ",
+          "description": "Te mit mondanál? Isten elé helyezem, amit észrevettem. Hálát adok és kéréseket fogalmazok meg. Felteszem a kérdést: „És Te mit mondanál?” ",
           "voices": [
             "esti5noi.mp3",
             "esti5ferfi.mp3",
@@ -632,7 +633,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Mi vár rám holnap?        A holnapi nap felé fordulok és tudatosítom, hogy Isten segítségével        a holnapi naphoz is elegendő erőm lesz. Bármi is foglalkoztat, Isten        szeretetére bízom azt.",
+          "description": "Mi vár rám holnap? A holnapi nap felé fordulok és tudatosítom, hogy Isten segítségével a holnapi naphoz is elegendő erőm lesz. Bármi is foglalkoztat, Isten szeretetére bízom azt.",
           "voices": [
             "esti6noi.mp3",
             "esti6ferfi.mp3",
@@ -642,7 +643,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Elengedés        Istennel beszélgetve az kezébe helyezem a válasz nélkül maradt kérdéseimet, nehézségeimet és félelmeimet. Azzal a tudattal pihenek le, hogy az        életem az kezében van.",
+          "description": "Elengedés Istennel beszélgetve az kezébe helyezem a válasz nélkül maradt kérdéseimet, nehézségeimet és félelmeimet. Azzal a tudattal pihenek le, hogy az életem az kezében van.",
           "voices": [
             "esti7noi.mp3",
             "esti7ferfi.mp3",
@@ -663,14 +664,14 @@
         }
       ]
     }
-   ]  
-  },
-  {"title": "Egyéb Döntés-Kommunikáció-Reflexió",
+  ]
+},
+{"title": "Egyéb Döntés-Kommunikáció-Reflexió",
   "image": "egyeb.jpg",
   "prayers": [
     {
       "title": "Csapatban az igazi",
-      "description": "Műhelymunkák, megbeszélések, konferenciák és csoportos                  alkalmak – mindig vannak emberek, akik valamilyen közös                  ügy érdekében találkoznak. A csapatmunka nem önmagért                  való cél, hanem a jó és hatásos eredmények garanciája. Ezért                  vesszük komolyan a csapatmunkát és ajánljuk az alábbi                  szabályokat:",
+      "description": "Műhelymunkák, megbeszélések, konferenciák és csoportos alkalmak – mindig vannak emberek, akik valamilyen közös ügy érdekében találkoznak. A csapatmunka nem önmagért való cél, hanem a jó és hatásos eredmények garanciája. Ezért vesszük komolyan a csapatmunkát és ajánljuk az alábbi szabályokat:",
       "image": "csapatbanazigazi.jpg",
       "voice_options": [],
       "minTimeInMinutes": 5,
@@ -682,25 +683,25 @@
           "type": "FLEX"
         },
         {
-          "description": "2. Kölcsönösen elfogadjuk egymást olyannak, amilyenek vagyunk.        (És nem olyannak, amilyennek szívesen látnánk másokat).",
+          "description": "2. Kölcsönösen elfogadjuk egymást olyannak, amilyenek vagyunk. (És nem olyannak, amilyennek szívesen látnánk másokat).",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
         },
         {
-          "description": "3. Vita esetén tiszteletben tartjuk a beszédidőt és        tartózkodunk a monológoktól.",
+          "description": "3. Vita esetén tiszteletben tartjuk a beszédidőt és tartózkodunk a monológoktól.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
         },
         {
-          "description": "4. Figyelmesen hallgatjuk a másikat és igyekszünk        az elhangzottakat megérteni.",
+          "description": "4. Figyelmesen hallgatjuk a másikat és igyekszünk az elhangzottakat megérteni.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
         },
         {
-          "description": "5. Nem gerjesztünk magunkban neheztelést,        hanem kimondjuk akár a haragunkat is.",
+          "description": "5. Nem gerjesztünk magunkban neheztelést, hanem kimondjuk akár a haragunkat is.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
@@ -718,7 +719,7 @@
           "type": "FLEX"
         },
         {
-          "description": "8. A véleménykülönbségre, mint érdekes gazdagodási        lehetőségre tekintünk, és nem a másik zavaró        butaságának vesszük.",
+          "description": "8. A véleménykülönbségre, mint érdekes gazdagodási lehetőségre tekintünk, és nem a másik zavaró butaságának vesszük.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
@@ -736,7 +737,7 @@
           "type": "FLEX"
         },
         {
-          "description": "11. Szívesen megosztjuk egymással az új        eredményeket és ismereteket.",
+          "description": "11. Szívesen megosztjuk egymással az új eredményeket és ismereteket.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
@@ -748,13 +749,13 @@
           "type": "FLEX"
         },
         {
-          "description": "13. Nem hozunk fel abszurd kívételes helyzeteket        csak azért, hogy megakadályozzunk egy döntést.",
+          "description": "13. Nem hozunk fel abszurd kívételes helyzeteket csak azért, hogy megakadályozzunk egy döntést.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
         },
         {
-          "description": "14. Kétségeinket elengedve vállaljuk a közös döntéseket        és eredményeinket nem vonjuk kétségbe.",
+          "description": "14. Kétségeinket elengedve vállaljuk a közös döntéseket és eredményeinket nem vonjuk kétségbe.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
@@ -763,37 +764,37 @@
     },
     {
       "title": "Tiszta beszéd",
-      "description": "A jó kommunikáció nélkülözhetetlen része minden megbeszélésnek                  és egyeztetésnek. Saját gondolatainkat, elképzeléseinket, észrevételeinket, vágyainkat, haragunkat, aggodalmainkat, víziónkat mind                  megosztjuk másokkal − formálva ez által világunkat. Szavakon,                  mondatokon, sőt több mindenen múlik, hogy ez sikerül-e. Kommunikációs irányelvek segíthetik a csoporttagok egymás közötti                  véleménycseréjét, egymáshoz való igazodását és viszonyulását. Így                  létrejön egy tér, ahol megvalósulhat a valódi megértés, új gondolatok                  megosztása és beszélgetés Istenről. Ilyen irányelvek a következők:",
+      "description": "A jó kommunikáció nélkülözhetetlen része minden megbeszélésnek és egyeztetésnek. Saját gondolatainkat, elképzeléseinket, észrevételeinket, vágyainkat, haragunkat, aggodalmainkat, víziónkat mind megosztjuk másokkal − formálva ez által világunkat. Szavakon, mondatokon, sőt több mindenen múlik, hogy ez sikerül-e. Kommunikációs irányelvek segíthetik a csoporttagok egymás közötti véleménycseréjét, egymáshoz való igazodását és viszonyulását. Így létrejön egy tér, ahol megvalósulhat a valódi megértés, új gondolatok megosztása és beszélgetés Istenről. Ilyen irányelvek a következők:",
       "image": "tisztabeszed.jpg",
       "voice_options": [],
       "minTimeInMinutes": 5,
       "steps": [
         {
-          "description": "Reflexió – magammal kezdve          „Hogy vagyok most? Milyen kérdéseim        vannak? Mi zaklat fel? Mi okoz örömet?” Ezek a kérdések világosságot        teremtenek és képessé tesznek arra, hogy tudatosítsuk érzéseinket.",
+          "description": "Reflexió – magammal kezdve „Hogy vagyok most? Milyen kérdéseim vannak? Mi zaklat fel? Mi okoz örömet?” Ezek a kérdések világosságot teremtenek és képessé tesznek arra, hogy tudatosítsuk érzéseinket.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
         },
         {
-          "description": "Én-közlés          Az általánosságban megfogalmazott vagy a „te” kifejezések        nagyon kedveltek, gyakran azonban ködösítenek.        A beszéd világossá válik, ha a megnyilatkozásaimban magamról beszélek: „én azt hiszem”, „meg vagyok győződve”. Így érthetővé válik a másik        számára, mit jelentenek nekem, beszélőnek az események.",
+          "description": "Én-közlés Az általánosságban megfogalmazott vagy a „te” kifejezések nagyon kedveltek, gyakran azonban ködösítenek. A beszéd világossá válik, ha a megnyilatkozásaimban magamról beszélek: „én azt hiszem”, „meg vagyok győződve”. Így érthetővé válik a másik számára, mit jelentenek nekem, beszélőnek az események.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
         },
         {
-          "description": "Teret adok a másiknak          Egy sikeres párbeszédben alapvető fontosságú        a beszéd, mint ahogy a meghallgatás is. Ez konkrétan azt jelenti, hogy        a másiknak időt adunk a beszédre és figyelmet szentelünk a mondanivalójának. Tehát megpróbáljuk a szavait nem csak hallgatni, hanem        megérteni is: Milyen nézőpontból,        és milyen motivációval beszél a másik?",
+          "description": "Teret adok a másiknak Egy sikeres párbeszédben alapvető fontosságú a beszéd, mint ahogy a meghallgatás is. Ez konkrétan azt jelenti, hogy a másiknak időt adunk a beszédre és figyelmet szentelünk a mondanivalójának. Tehát megpróbáljuk a szavait nem csak hallgatni, hanem megérteni is: Milyen nézőpontból, és milyen motivációval beszél a másik?",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
         },
         {
-          "description": "Hallgatás          Nem kell mindig csinálnom valamit, nem kell mindig        mindenhez hozzászólnom, hanem egyszerűen megállhatok csak úgy,        és Istenre bízhatom, hogy utána annál tudatosabban beszélhessek és        alakíthassam a dolgokat.",
+          "description": "Hallgatás Nem kell mindig csinálnom valamit, nem kell mindig mindenhez hozzászólnom, hanem egyszerűen megállhatok csak úgy, és Istenre bízhatom, hogy utána annál tudatosabban beszélhessek és alakíthassam a dolgokat.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
         },
         {
-          "description": "A cselekvés kapcsolati munka Egy megosztás akkor sikeres, ha az a        tettekben megnyilvánul: Mit csinálunk másképp? Mi marad változatlan?        Mi kap több teret?        Reflektálok arra, hogy hova akarok kilukadni, mit akarok elérni a magam és a csoportban betöltött szerepem számára, ill. a körülöttem lévőkhöz fűződő kapcsolatom és közös ügyünk szempontjából. Mindeközben        azt is szem előtt tartom,        mennyire tud köztünk növekedni a hit,        a remény és a szeretet.",
+          "description": "A cselekvés kapcsolati munka Egy megosztás akkor sikeres, ha az a tettekben megnyilvánul: Mit csinálunk másképp? Mi marad változatlan? Mi kap több teret? Reflektálok arra, hogy hova akarok kilukadni, mit akarok elérni a magam és a csoportban betöltött szerepem számára, ill. a körülöttem lévőkhöz fűződő kapcsolatom és közös ügyünk szempontjából. Mindeközben azt is szem előtt tartom, mennyire tud köztünk növekedni a hit, a remény és a szeretet.",
           "voices": [],
           "timeInSeconds": 10,
           "type": "FLEX"
@@ -802,7 +803,7 @@
     },
     {
       "title": "A lelkek megkülönböztetése",
-      "description": "Ki vagyok én és mit jelent nekem az élet? Ezeket a kérdéseket életem                  sok döntésében megválaszolom. Gyakran a döntéseinket nem szabadon, hanem az előítéletek, ellenszenv vagy kényszer hatására hozzuk.                  Loyolai Szent Ignác szerint a lelkek megkülönböztetése segíthet                  nekem a szabad és a helyzethez illő döntések meghozatalában. Hogy                  történik mindez? Istennel, mint egy jó baráttal együtt tekintek magamra ebben a helyzetben. Olyan gondolatokat és érzéseket engedek                  meg, amiket egyébként be sem vallanék magamnak.",
+      "description": "Ki vagyok én és mit jelent nekem az élet? Ezeket a kérdéseket életem sok döntésében megválaszolom. Gyakran a döntéseinket nem szabadon, hanem az előítéletek, ellenszenv vagy kényszer hatására hozzuk. Loyolai Szent Ignác szerint a lelkek megkülönböztetése segíthet nekem a szabad és a helyzethez illő döntések meghozatalában. Hogy történik mindez? Istennel, mint egy jó baráttal együtt tekintek magamra ebben a helyzetben. Olyan gondolatokat és érzéseket engedek meg, amiket egyébként be sem vallanék magamnak.",
       "image": "megkulonboztetes.jpg",
       "voice_options": [
         "Női",
@@ -812,7 +813,7 @@
       "minTimeInMinutes": 20,
       "steps": [
         {
-          "description": "1. lépés: Felteszem magamnak a kérdést, egyáltalán van-e lehetőségem dönteni? Különösen akkor kérdezem meg ezt magamtól, ha feldúlt vagyok, vagy        nyomás alatt érzem magam.",
+          "description": "1. lépés: Felteszem magamnak a kérdést, egyáltalán van-e lehetőségem dönteni? Különösen akkor kérdezem meg ezt magamtól, ha feldúlt vagyok, vagy nyomás alatt érzem magam.",
           "voices": [
             "lelkek1noi.mp3",
             "lelkek1ferfi.mp3",
@@ -822,7 +823,7 @@
           "type": "FIX"
         },
         {
-          "description": "2. lépés: Fantáziadúsan és bátorsággal tisztázom azt, milyen döntési altenatívák léteznek, hogy elkerüljem a kényszeredett „vagy-vagy” helyzeteket. Eddig        minden lehetőséget észrevettem és elfogadtam?",
+          "description": "2. lépés: Fantáziadúsan és bátorsággal tisztázom azt, milyen döntési altenatívák léteznek, hogy elkerüljem a kényszeredett „vagy-vagy” helyzeteket. Eddig minden lehetőséget észrevettem és elfogadtam?",
           "voices": [
             "lelkek2noi.mp3",
             "lelkek2ferfi.mp3",
@@ -832,7 +833,7 @@
           "type": "FLEX"
         },
         {
-          "description": "3. lépés: Józan érveket keresek az alternatívák mellett, ill. ellen. Különös        figyelmet szentelek annak, hogy a saját erőmet figyelembe véve határozzam        meg, mit lehet értelmesen és erkölcsösen megtenni. Segítenek az ilyen kérdések: Mi van a korábbi fontos döntéseimmel összhangban? Mi illeszkedik a        feladataimhoz? Hogyan döntene Jézus vagy más, számomra fontos személy? ",
+          "description": "3. lépés: Józan érveket keresek az alternatívák mellett, ill. ellen. Különös figyelmet szentelek annak, hogy a saját erőmet figyelembe véve határozzam meg, mit lehet értelmesen és erkölcsösen megtenni. Segítenek az ilyen kérdések: Mi van a korábbi fontos döntéseimmel összhangban? Mi illeszkedik a feladataimhoz? Hogyan döntene Jézus vagy más, számomra fontos személy? ",
           "voices": [
             "lelkek3noi.mp3",
             "lelkek3ferfi.mp3",
@@ -842,7 +843,7 @@
           "type": "FLEX"
         },
         {
-          "description": "4. lépés: Figyelmesen vizsgálom a lelkem rezdüléseit mindegyik lehetőség        esetében: a sokféle hangulatot, érzéseket és benyomásokat. Különösen        finoman és élesen tudatosítom, ahol félelmek és kétségek gyötörnek. Milyen        hangok tűnnek hangosnak bennem? Mit harsognak túl? Mi az, ami szinte        alig mutatkozik meg?",
+          "description": "4. lépés: Figyelmesen vizsgálom a lelkem rezdüléseit mindegyik lehetőség esetében: a sokféle hangulatot, érzéseket és benyomásokat. Különösen finoman és élesen tudatosítom, ahol félelmek és kétségek gyötörnek. Milyen hangok tűnnek hangosnak bennem? Mit harsognak túl? Mi az, ami szinte alig mutatkozik meg?",
           "voices": [
             "lelkek4noi.mp3",
             "lelkek4ferfi.mp3",
@@ -852,7 +853,7 @@
           "type": "FLEX"
         },
         {
-          "description": "5. lépés: Isten bízik bennem és a legjobbat akarja nekem. A belső megmozdulásaimban szól hozzám. Elmondom neki, mi az én valós kérdésem és hová        hajtanak legbelső vágyaim. Bátorságot és szabadságot kérek.",
+          "description": "5. lépés: Isten bízik bennem és a legjobbat akarja nekem. A belső megmozdulásaimban szól hozzám. Elmondom neki, mi az én valós kérdésem és hová hajtanak legbelső vágyaim. Bátorságot és szabadságot kérek.",
           "voices": [
             "lelkek5noi.mp3",
             "lelkek5ferfi.mp3",
@@ -862,7 +863,7 @@
           "type": "FIX"
         },
         {
-          "description": "6. lépés: Még egyszer rátekintek a különböző lehetőségek szabta kép egészére        és megpróbálom kitalálni (ízlelgetni), hol érzek hosszan tartóan nagyobb szabadságot, több higgadtságot, jövőt és nagyobb teret a személyes növekedésre.        Hol mutatkozik meg jobban a szeretet és hol erősödik? Hol nyílik a szívem        több reményre, hitre és szeretetre, még akkor is, ha az út talán nehezebbnek is        tűnik? Ezekben a mozzanatokban mutatkozik meg a Teremtő hívása.",
+          "description": "6. lépés: Még egyszer rátekintek a különböző lehetőségek szabta kép egészére és megpróbálom kitalálni (ízlelgetni), hol érzek hosszan tartóan nagyobb szabadságot, több higgadtságot, jövőt és nagyobb teret a személyes növekedésre. Hol mutatkozik meg jobban a szeretet és hol erősödik? Hol nyílik a szívem több reményre, hitre és szeretetre, még akkor is, ha az út talán nehezebbnek is tűnik? Ezekben a mozzanatokban mutatkozik meg a Teremtő hívása.",
           "voices": [
             "lelkek6noi.mp3",
             "lelkek6ferfi.mp3",
@@ -872,7 +873,7 @@
           "type": "FLEX"
         },
         {
-          "description": "7. lépés: Ebben az irányban hozom meg döntésemet és cselekszem. „A        legtöbb ember nem is sejti, mit tudna belőlük kihozni Isten, ha felajánlanák        magukat neki.” (Loyolai Szt. Ignác)",
+          "description": "7. lépés: Ebben az irányban hozom meg döntésemet és cselekszem. „A legtöbb ember nem is sejti, mit tudna belőlük kihozni Isten, ha felajánlanák magukat neki.” (Loyolai Szt. Ignác)",
           "voices": [
             "lelkek7noi.mp3",
             "lelkek7ferfi.mp3",
@@ -885,7 +886,7 @@
     },
     {
       "title": "Reflektálva tanulni",
-      "description": "Az Ignáci Pedagógiai Műhely szemináriumainak elhagyhatatlan része a rendszeres reflexiós szünet. A csendben a                  résztvevők megállnak és ízlelgetik a kapott benyomásokat és                  ismereteket. Kérdések a megállások szakaszaihoz:",
+      "description": "Az Ignáci Pedagógiai Műhely szemináriumainak elhagyhatatlan része a rendszeres reflexiós szünet. A csendben a résztvevők megállnak és ízlelgetik a kapott benyomásokat és ismereteket. Kérdések a megállások szakaszaihoz:",
       "image": "reflektalvatanulni.jpg",
       "voice_options": [
         "Női",
@@ -895,7 +896,7 @@
       "minTimeInMinutes": 10,
       "steps": [
         {
-          "description": "Mi mozgat engem?        Azt keresem a saját viselkedésemben, hogy mi lelkesített és hol voltam        kétkedő. Mit akarok talán túlzottan is és mit túl kevéssé? Mi segít        engem abban, hogy újra szabad legyek?        Ha érzékelem az érzéseimet és indulataimat, akkor tudok velük valójában találkozni.",
+          "description": "Mi mozgat engem? Azt keresem a saját viselkedésemben, hogy mi lelkesített és hol voltam kétkedő. Mit akarok talán túlzottan is és mit túl kevéssé? Mi segít engem abban, hogy újra szabad legyek? Ha érzékelem az érzéseimet és indulataimat, akkor tudok velük valójában találkozni.",
           "voices": [
             "reflekt1noi.mp3",
             "reflekt1ferfi.mp3",
@@ -905,7 +906,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Sikerült elfogulatlannak maradnom?        A résztvevők egymás közötti nyíltsága a folyamatokban és eredményekben is nyíltságot ereményez.        Tudtam a többi résztvevőnek nagyobb teret adni, és jobban figyelni        rájuk? Mi mozgatja a többieket?        Figyelmesen megértettem a beszélők gondolatait, érzéseit        és szándékait – mindig elismerően és nem ítélkezve.        Megpróbálom a motivációikat megérteni. Nem szeretnék falba ütközni,        ezért kapcsolódási pontokat keresek.",
+          "description": "Sikerült elfogulatlannak maradnom? A résztvevők egymás közötti nyíltsága a folyamatokban és eredményekben is nyíltságot ereményez. Tudtam a többi résztvevőnek nagyobb teret adni, és jobban figyelni rájuk? Mi mozgatja a többieket? Figyelmesen megértettem a beszélők gondolatait, érzéseit és szándékait – mindig elismerően és nem ítélkezve. Megpróbálom a motivációikat megérteni. Nem szeretnék falba ütközni, ezért kapcsolódási pontokat keresek.",
           "voices": [
             "reflekt2noi.mp3",
             "reflekt2ferfi.mp3",
@@ -915,7 +916,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Közös célunk miben áll?        Tudom, ha a vélemények különböznek is egymástól, mindig van egy        közös nevező. Ezt szeretnénk megtalálni. És mivel mindenki a legjobbat        akarja, ez közös kiindulási pontunk is lehet.",
+          "description": "Közös célunk miben áll? Tudom, ha a vélemények különböznek is egymástól, mindig van egy közös nevező. Ezt szeretnénk megtalálni. És mivel mindenki a legjobbat akarja, ez közös kiindulási pontunk is lehet.",
           "voices": [
             "reflekt3noi.mp3",
             "reflekt3ferfi.mp3",
@@ -925,7 +926,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Hogyan kapcsolódik Istenhez mindaz,        ami elhangzott, és ami történt?        Teret engedek a lelki dimenziónak és hagyom,        hogy Isten vezessen.        „Te, Istenem, mit mondanál most nekem?”",
+          "description": "Hogyan kapcsolódik Istenhez mindaz, ami elhangzott, és ami történt? Teret engedek a lelki dimenziónak és hagyom, hogy Isten vezessen. „Te, Istenem, mit mondanál most nekem?”",
           "voices": [
             "reflekt4noi.mp3",
             "reflekt4ferfi.mp3",
@@ -935,7 +936,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Mit jelent számomra az az eredmény, amit kitűztünk magunknak?        A műhely végén megkeresem, hogyan kapcsolódnak a        közösen feldolgozottak a személyemhez és helyzetemhez.        Mi a következő konkrét lépés számomra? Mit fogok        tudatosan elhagyni és mit fogok újrakezdeni? ",
+          "description": "Mit jelent számomra az az eredmény, amit kitűztünk magunknak? A műhely végén megkeresem, hogyan kapcsolódnak a közösen feldolgozottak a személyemhez és helyzetemhez. Mi a következő konkrét lépés számomra? Mit fogok tudatosan elhagyni és mit fogok újrakezdeni? ",
           "voices": [
             "reflekt5noi.mp3",
             "reflekt5ferfi.mp3",
@@ -948,7 +949,7 @@
     },
     {
       "title": "A mindennapok fókusza",
-      "description": "A mindennapokban nem is olyan egyszerű figyelmünket                  a fontos és lényeges dolgokon tartani: időpontok, munkahelyi feladatok, magánéleti kötelezettségek, telefonok                  és emailek versenyeznek a figyelmünkért. Ez a rövid                  gyakorlat segít abban, hogy visszataláljunk a valóban                  fontos dolgokhoz.",
+      "description": "A mindennapokban nem is olyan egyszerű figyelmünket a fontos és lényeges dolgokon tartani: időpontok, munkahelyi feladatok, magánéleti kötelezettségek, telefonok és emailek versenyeznek a figyelmünkért. Ez a rövid gyakorlat segít abban, hogy visszataláljunk a valóban fontos dolgokhoz.",
       "image": "mindennapokfokusza.jpg",
       "voice_options": [
         "Női",
@@ -958,7 +959,7 @@
       "minTimeInMinutes": 15,
       "steps": [
         {
-          "description": "Időt szakítani   Tegyél szabaddá 15 percet. Mondd ezeket a szavakat:        „Most van időm és egyszerűen itt ülök, nincs semmi dolgom. A fű        is magától nő.” Milyen visszahangokat kelt benned ez a mondat és        ez a helyzet?",
+          "description": "Időt szakítani Tegyél szabaddá 15 percet. Mondd ezeket a szavakat: „Most van időm és egyszerűen itt ülök, nincs semmi dolgom. A fű is magától nő.” Milyen visszahangokat kelt benned ez a mondat és ez a helyzet?",
           "voices": [
             "mnapok1noi.mp3",
             "mnapok1ferfi.mp3",
@@ -968,7 +969,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Az érzés ízlelése         Kérdezd meg magadtól: „Mi mozgat most engem?” Légy nagyon kíváncsi arra, ami most mutatkozik előtted. Ha        egy téma nagyon hangsúlyosan tör elő, foglalkozz vele mélyebben       is.",
+          "description": "Az érzés ízlelése Kérdezd meg magadtól: „Mi mozgat most engem?” Légy nagyon kíváncsi arra, ami most mutatkozik előtted. Ha egy téma nagyon hangsúlyosan tör elő, foglalkozz vele mélyebben is.",
           "voices": [
             "mnapok2noi.mp3",
             "mnapok2ferfi.mp3",
@@ -978,7 +979,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Távolságtartás         Kapcsold össze ezt a témát egy szimbólummal.        Rajzolj! Pédául egy villám jelölhet egy konfliktust a munkatársaddal, vagy egy vitorlás a nyári szabadság iránti vágyat. Így távolságot        nyersz attól, ami belül nagyon foglalkoztat.",
+          "description": "Távolságtartás Kapcsold össze ezt a témát egy szimbólummal. Rajzolj! Pédául egy villám jelölhet egy konfliktust a munkatársaddal, vagy egy vitorlás a nyári szabadság iránti vágyat. Így távolságot nyersz attól, ami belül nagyon foglalkoztat.",
           "voices": [
             "mnapok3noi.mp3",
             "mnapok3ferfi.mp3",
@@ -988,7 +989,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Az összefüggés meglátása         Tarts belsőleg távolságot a témától és        kérdezd meg magadtól: „Mi minden kapcsolódik még ehhez a        témához? Mit kívánsz még magadnak?” Ez nem egy gondolatban        való elmélyülésről szól, inkább arról, hogy az összképet meglásd.        Szavak, képek, érzések, jelenetek, személyek, testi érintések, ízek…        figyelj mindenre, ami a témával kapcsolatban megmutatkozik        Benned.",
+          "description": "Az összefüggés meglátása Tarts belsőleg távolságot a témától és kérdezd meg magadtól: „Mi minden kapcsolódik még ehhez a témához? Mit kívánsz még magadnak?” Ez nem egy gondolatban való elmélyülésről szól, inkább arról, hogy az összképet meglásd. Szavak, képek, érzések, jelenetek, személyek, testi érintések, ízek… figyelj mindenre, ami a témával kapcsolatban megmutatkozik Benned.",
           "voices": [
             "mnapok4noi.mp3",
             "mnapok4ferfi.mp3",
@@ -998,7 +999,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Elidőzés         Biztosíts időt arra, hogy elidőzz a felmerülő érzéseknél,        amik most előkerültek benned. Érezd a felbukkanó vágyakat,        „ízleld” őket. Várd ki, hogy mi        történik. Így tudsz a témával magadban és Isten előtt        is elidőzni.",
+          "description": "Elidőzés Biztosíts időt arra, hogy elidőzz a felmerülő érzéseknél, amik most előkerültek benned. Érezd a felbukkanó vágyakat, „ízleld” őket. Várd ki, hogy mi történik. Így tudsz a témával magadban és Isten előtt is elidőzni.",
           "voices": [
             "mnapok5noi.mp3",
             "mnapok5ferfi.mp3",
@@ -1008,7 +1009,7 @@
           "type": "FLEX"
         },
         {
-          "description": "Útravaló         Mielőtt visszatérnél a mindennapokba, kérdezd ezt        magadtól: „Mi újat fedeztem fel az elmúlt percekben? Mit tehetnék        most? Uram, mit gondolsz Te erről?”",
+          "description": "Útravaló Mielőtt visszatérnél a mindennapokba, kérdezd ezt magadtól: „Mi újat fedeztem fel az elmúlt percekben? Mit tehetnék most? Uram, mit gondolsz Te erről?”",
           "voices": [
             "mnapok6noi.mp3",
             "mnapok6ferfi.mp3",
@@ -1019,6 +1020,6 @@
         }
       ]
     }
-  ]  
+  ]
   }
 ]
