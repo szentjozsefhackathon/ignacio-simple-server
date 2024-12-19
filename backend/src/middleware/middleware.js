@@ -10,10 +10,10 @@ const limiter = rateLimit({
     message: 'Too many requests, please try again later.'
   });
   
-const adminAuth = basicAuth({
-  users: { [process.env.ADMIN_NAME]: process.env.ADMIN_PASSWORD },
-  challenge: true,
-  unauthorizedResponse: 'Unauthorized access'
-});
+// const adminAuth = basicAuth({
+//   users: { [process.env.ADMIN_NAME]: process.env.ADMIN_PASSWORD },
+//   challenge: true,
+//   unauthorizedResponse: 'Unauthorized access'
+// });
 
 module.exports = { limiter, adminAuth };

@@ -21,7 +21,7 @@ app.use(cors());
 
 // Middleware
 app.use(limiter);
-app.use('/admin', adminAuth);
+// app.use('/admin', adminAuth);
 
 // Use JSON and media routes
 app.use('/api/json', jsonRoutes);
