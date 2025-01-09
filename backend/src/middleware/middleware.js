@@ -16,4 +16,5 @@ const limiter = rateLimit({
 //   unauthorizedResponse: 'Unauthorized access'
 // });
 
-module.exports = { limiter, adminAuth };
+module.exports = {limiter};
+// module.exports = { limiter, adminAuth };
