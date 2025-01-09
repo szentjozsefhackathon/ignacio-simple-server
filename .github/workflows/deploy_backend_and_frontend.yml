@@ -35,7 +35,7 @@ jobs:
           context: ./backend
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/ignacio-backend:latest
+            ghcr.io/orgs/szentjozsefhackathon/ignacio-backend:latest
             ghcr.io/${{ github.repository_owner }}/ignacio-backend:${{ github.sha }}
 
       - name: Build and Push Frontend
@@ -55,4 +55,4 @@ jobs:
           echo "ghcr.io/${{ github.repository_owner }}/ignacio-backend:latest"
           echo "ghcr.io/${{ github.repository_owner }}/ignacio-backend:${{ github.sha }}"
           echo "ghcr.io/${{ github.repository_owner }}/ignacio-frontend:latest"
-          echo "ghcr.io/${{ github.repository_owner }}/ignacio-frontend:${{ github.sha }}""
+          echo "ghcr.io/${{ github.repository_owner }}/ignacio-frontend:${{ github.sha }}"
