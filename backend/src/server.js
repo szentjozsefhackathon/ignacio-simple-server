@@ -11,6 +11,7 @@ const categoriesRoutes = require('./routes/categories');
 const prayersRoutes = require('./routes/prayers');
 const stepsRoutes = require('./routes/steps');
 const mediaApiRoutes = require('./routes/media');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 const PORT = process.env.PORT || 5005;
@@ -19,6 +20,7 @@ const PORT = process.env.PORT || 5005;
 //The error occurs because the browser's Same-Origin Policy blocks the request made from http://localhost:44849 to http://localhost:3000 due to a missing Access-Control-Allow-Origin header in the response from the server at localhost:3000. This is a Cross-Origin Resource Sharing (CORS) issue.
 const cors = require('cors');
 app.use(cors());
+app.use(express.json());
 
 
 
@@ -29,6 +31,7 @@ app.use(limiter);
 // Use JSON and media routes
 app.use('/api/json', jsonRoutes);
 app.use('/api/media', mediaRoutes);
+app.use('/api/auth', authRoutes);
 app.use('/api/categories', categoriesRoutes);
 app.use('/api/prayers', prayersRoutes);
 app.use('/api/steps', stepsRoutes);

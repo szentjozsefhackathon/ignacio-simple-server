@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Outlet } from 'react-router-dom';
 import {
   Box,
   Drawer,
@@ -21,7 +21,9 @@ import {
   ListAlt as StepsIcon,
   CloudUpload as MediaIcon,
   Home as HomeIcon,
+  Logout as LogoutIcon,
 } from '@mui/icons-material';
+import { useAuth } from '../../context/AuthContext';
 
 const drawerWidth = 260;
 
@@ -32,9 +34,15 @@ const menuItems = [
   { text: 'Média', icon: <MediaIcon />, path: '/admin/media' },
 ];
 
-export default function AdminLayout({ children }) {
+export default function AdminLayout() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   return (
     <Box sx={{ display: 'flex', minHeight: '100vh' }}>
@@ -118,6 +126,24 @@ export default function AdminLayout({ children }) {
                 <ListItemText primary="Főoldal" primaryTypographyProps={{ fontWeight: 500 }} />
               </ListItemButton>
             </ListItem>
+            <ListItem disablePadding sx={{ mb: 0.5 }}>
+              <ListItemButton
+                onClick={handleLogout}
+                sx={{
+                  borderRadius: 2,
+                  color: 'error.main',
+                  '&:hover': {
+                    bgcolor: 'error.light',
+                    color: 'white',
+                  },
+                }}
+              >
+                <ListItemIcon sx={{ minWidth: 40, color: 'error.main' }}>
+                  <LogoutIcon />
+                </ListItemIcon>
+                <ListItemText primary="Kijelentkezés" primaryTypographyProps={{ fontWeight: 500 }} />
+              </ListItemButton>
+            </ListItem>
           </List>
         </Box>
       </Drawer>
@@ -131,7 +157,7 @@ export default function AdminLayout({ children }) {
       >
         <Toolbar />
         <Container maxWidth="xl" sx={{ py: 3 }}>
-          {children}
+          <Outlet />
         </Container>
       </Box>
     </Box>

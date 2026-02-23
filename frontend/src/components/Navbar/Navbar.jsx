@@ -1,9 +1,25 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Button, Box, Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import { Edit as EditIcon, Login as LoginIcon } from "@mui/icons-material";
 
 function Navbar() {
   const navigate = useNavigate();
+  const { isAuthenticated, logout } = useAuth();
+
+  const handleAuth = () => {
+    if (isAuthenticated) {
+      navigate("/admin/categories");
+    } else {
+      navigate("/login");
+    }
+  };
+
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
 
   return (
     <AppBar position="static" color="primary" elevation={0}>
@@ -23,27 +39,48 @@ function Navbar() {
             ☥ Ignáci imák
           </Typography>
           <Box>
-            <Button 
-              color="inherit" 
-              onClick={() => navigate("/admin/categories")}
-              sx={{ mr: 1 }}
-            >
-              Admin
-            </Button>
-            <Button 
-              variant="outlined" 
-              color="inherit"
-              onClick={() => navigate("/login")}
-              sx={{ 
-                borderColor: 'rgba(255,255,255,0.5)',
-                '&:hover': {
-                  borderColor: 'white',
-                  backgroundColor: 'rgba(255,255,255,0.1)'
-                }
-              }}
-            >
-              Bejelentkezés
-            </Button>
+            {isAuthenticated ? (
+              <>
+                <Button 
+                  color="inherit" 
+                  onClick={handleAuth}
+                  startIcon={<EditIcon />}
+                  sx={{ mr: 1 }}
+                >
+                  Szerkesztés
+                </Button>
+                <Button 
+                  variant="outlined" 
+                  color="inherit"
+                  onClick={handleLogout}
+                  sx={{ 
+                    borderColor: 'rgba(255,255,255,0.5)',
+                    '&:hover': {
+                      borderColor: 'white',
+                      backgroundColor: 'rgba(255,255,255,0.1)'
+                    }
+                  }}
+                >
+                  Kijelentkezés
+                </Button>
+              </>
+            ) : (
+              <Button 
+                variant="outlined" 
+                color="inherit"
+                onClick={handleAuth}
+                startIcon={<LoginIcon />}
+                sx={{ 
+                  borderColor: 'rgba(255,255,255,0.5)',
+                  '&:hover': {
+                    borderColor: 'white',
+                    backgroundColor: 'rgba(255,255,255,0.1)'
+                  }
+                }}
+              >
+                Bejelentkezés
+              </Button>
+            )}
           </Box>
         </Toolbar>
       </Container>

@@ -11,12 +11,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5005:5005"
-  flutter-web:
-    build:
-      context: ./flutter-web
-      dockerfile: Dockerfile
-    ports:
-      - "8080:80"
+  # flutter-web:
+  #   build:
+  #     context: ./flutter-web
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8080:80"
   nginx:
     build:
       context: ./nginx
@@ -26,4 +26,4 @@ services:
     depends_on:
       - frontend
       - backend
-      - flutter-web
+      # - flutter-web

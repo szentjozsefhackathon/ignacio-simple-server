@@ -7,22 +7,33 @@ import {
   TextField, 
   Button, 
   Container,
-  Alert 
+  Alert,
+  CircularProgress
 } from "@mui/material";
 import { LockOutlined as LockIcon } from "@mui/icons-material";
+import { useAuth } from "../../context/AuthContext";
 
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "admin") {
+    setError("");
+    setLoading(true);
+    
+    const result = await login(username, password);
+    
+    setLoading(false);
+    
+    if (result.success) {
       navigate("/admin/categories");
     } else {
-      setError("Hibás felhasználónév vagy jelszó");
+      setError(result.error || "Hibás felhasználónév vagy jelszó");
     }
   };
 
@@ -84,6 +95,7 @@ function LoginPage() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               autoFocus
+              disabled={loading}
             />
             <TextField
               margin="normal"
@@ -93,20 +105,23 @@ function LoginPage() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              disabled={loading}
             />
             <Button
               type="submit"
               fullWidth
               variant="contained"
+              disabled={loading}
               sx={{ mt: 3, mb: 2, py: 1.5, fontWeight: 600 }}
             >
-              Bejelentkezés
+              {loading ? <CircularProgress size={24} color="inherit" /> : "Bejelentkezés"}
             </Button>
             <Button
               fullWidth
               variant="text"
               onClick={() => navigate("/")}
               sx={{ color: "text.secondary" }}
+              disabled={loading}
             >
               Vissza a főoldalra
             </Button>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import { Box, Container, Typography, Grid, Card, CardContent, CardActionArea, Stack, Chip } from "@mui/material";
 import { Android, PhoneIphone, Computer, Language } from "@mui/icons-material";
 import Navbar from "./components/Navbar/Navbar";
@@ -9,7 +9,18 @@ import CategoriesPage from "./pages/CategoriesPage";
 import PrayersPage from "./pages/PrayersPage";
 import StepsPage from "./pages/StepsPage";
 import MediaPage from "./pages/MediaPage";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 import "./App.css";
+
+function ProtectedAdminRoute() {
+  const { isAuthenticated } = useAuth();
+  
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+  
+  return <AdminLayout />;
+}
 
 function LandingPage() {
   const appLinks = [
@@ -186,18 +197,37 @@ function LandingPage() {
 
 function App() {
   return (
-    <Router>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin/*" element={
+            <ProtectedRouteWithLayout />
+          } />
+          <Route path="/*" element={<LandingPage />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
+  );
+}
+
+function ProtectedRouteWithLayout() {
+  const { isAuthenticated } = useAuth();
+  
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+  
+  return (
+    <AdminLayout>
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/admin" element={<AdminLayout />}>
-          <Route path="categories" element={<CategoriesPage />} />
-          <Route path="prayers" element={<PrayersPage />} />
-          <Route path="steps" element={<StepsPage />} />
-          <Route path="media" element={<MediaPage />} />
-        </Route>
-        <Route path="/*" element={<LandingPage />} />
+        <Route index element={<Navigate to="/admin/categories" replace />} />
+        <Route path="categories" element={<CategoriesPage />} />
+        <Route path="prayers" element={<PrayersPage />} />
+        <Route path="steps" element={<StepsPage />} />
+        <Route path="media" element={<MediaPage />} />
       </Routes>
-    </Router>
+    </AdminLayout>
   );
 }
 
