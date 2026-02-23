@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, useLocation, Outlet } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   Box,
   Drawer,
@@ -34,7 +34,7 @@ const menuItems = [
   { text: 'Média', icon: <MediaIcon />, path: '/admin/media' },
 ];
 
-export default function AdminLayout() {
+export default function AdminLayout({ children }) {
   const navigate = useNavigate();
   const location = useLocation();
   const { logout } = useAuth();
@@ -157,7 +157,7 @@ export default function AdminLayout() {
       >
         <Toolbar />
         <Container maxWidth="xl" sx={{ py: 3 }}>
-          <Outlet />
+          {children}
         </Container>
       </Box>
     </Box>
