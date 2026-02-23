@@ -1,137 +1,203 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Box, Container, Typography, Grid, Card, CardContent, CardActionArea, Stack, Chip } from "@mui/material";
+import { Android, PhoneIphone, Computer, Language } from "@mui/icons-material";
 import Navbar from "./components/Navbar/Navbar";
 import LoginPage from "./components/LoginPage/LoginPage";
+import AdminLayout from "./components/AdminLayout/AdminLayout";
+import CategoriesPage from "./pages/CategoriesPage";
+import PrayersPage from "./pages/PrayersPage";
+import StepsPage from "./pages/StepsPage";
+import MediaPage from "./pages/MediaPage";
 import "./App.css";
 
+function LandingPage() {
+  const appLinks = [
+    {
+      title: "Web App",
+      description: "Használd böngészőben",
+      icon: <Language sx={{ fontSize: 48, color: "#8B0000" }} />,
+      href: "/flutter",
+      external: true,
+    },
+    {
+      title: "Android",
+      description: "Letöltés a Play Áruházból",
+      icon: <Android sx={{ fontSize: 48, color: "#8B0000" }} />,
+      href: "https://play.google.com/store/apps/details?id=hu.jezsuita.ima.ignaci",
+      external: true,
+    },
+    {
+      title: "iOS",
+      description: "Letöltés az App Store-ból",
+      icon: <PhoneIphone sx={{ fontSize: 48, color: "#8B0000" }} />,
+      href: "https://apps.apple.com",
+      external: true,
+    },
+    {
+      title: "Windows",
+      description: "Windows alkalmazás",
+      icon: <Computer sx={{ fontSize: 48, color: "#8B0000" }} />,
+      href: "#",
+      external: false,
+    },
+  ];
+
+  return (
+    <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
+      <Navbar />
+      
+      {/* Hero Section */}
+      <Box
+        sx={{
+          background: 'linear-gradient(135deg, #8B0000 0%, #6B0000 100%)',
+          color: 'white',
+          py: 8,
+          mb: 6,
+        }}
+      >
+        <Container maxWidth="md" sx={{ textAlign: "center" }}>
+          <Typography variant="h2" component="h1" gutterBottom fontWeight={700}>
+            Ignáci imák
+          </Typography>
+          <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
+            Lelki gyakorlatok Szent Ignác nyomdokain
+          </Typography>
+          <Typography variant="body1" sx={{ maxWidth: 600, mx: "auto", opacity: 0.85 }}>
+            Találj időt a csendben lévésre, és fedezd fel az imádság 
+            erejét a mindennapokban. Töltsd le az alkalmazást, vagy 
+            használd webes verziónkat.
+          </Typography>
+        </Container>
+      </Box>
+
+      {/* App Download Section */}
+      <Container maxWidth="lg" sx={{ pb: 8 }}>
+        <Typography variant="h4" component="h2" gutterBottom sx={{ mb: 4, textAlign: "center", color: "text.primary" }}>
+          Használd az alkalmazást
+        </Typography>
+        <Grid container spacing={3} justifyContent="center">
+          {appLinks.map((link, index) => (
+            <Grid item xs={12} sm={6} md={3} key={index}>
+              <Card 
+                sx={{ 
+                  height: '100%',
+                  transition: 'transform 0.2s, box-shadow 0.2s',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 8px 24px rgba(139,0,0,0.15)',
+                  }
+                }}
+              >
+                <CardActionArea 
+                  component="a"
+                  href={link.href}
+                  target={link.external ? "_blank" : "_self"}
+                  rel={link.external ? "noopener noreferrer" : ""}
+                  sx={{ height: '100%', p: 2 }}
+                >
+                  <CardContent sx={{ textAlign: "center", py: 4 }}>
+                    {link.icon}
+                    <Typography variant="h6" component="div" sx={{ mt: 2, fontWeight: 600, color: "text.primary" }}>
+                      {link.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                      {link.description}
+                    </Typography>
+                    {link.external && (
+                      <Chip 
+                        label="Külső link" 
+                        size="small" 
+                        sx={{ mt: 2, fontSize: '0.7rem' }} 
+                      />
+                    )}
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+
+        {/* Features Section */}
+        <Box sx={{ mt: 8 }}>
+          <Typography variant="h4" component="h2" gutterBottom sx={{ mb: 4, textAlign: "center" }}>
+            Mit kínál az alkalmazás?
+          </Typography>
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={4}>
+              <Card sx={{ height: '100%', p: 1 }}>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom color="primary" fontWeight={600}>
+                    Lelki gyakorlatok
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Vezetett meditációk, Szent Ignác-i szemlélődési 
+                    gyakorlatok, és mindennapi imádságok.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Card sx={{ height: '100%', p: 1 }}>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom color="primary" fontWeight={600}>
+                    Hangvezérelt ima
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Választhatsz férfi vagy női hangok között, 
+                    amelyek végigvezetnek az imádság lépésein.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Card sx={{ height: '100%', p: 1 }}>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom color="primary" fontWeight={600}>
+                    Napi reflexió
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Esti ima és lelki vizsgálat (examen) 
+                    segítenek a nap tudatos lezárásában.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+        </Box>
+      </Container>
+
+      {/* Footer */}
+      <Box sx={{ bgcolor: '#333', color: 'white', py: 4, mt: 'auto' }}>
+        <Container maxWidth="lg">
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="space-between" alignItems="center">
+            <Typography variant="body2">
+              ☥ Ignáci imák - Jezsuita lelkiség
+            </Typography>
+            <Typography variant="body2" sx={{ opacity: 0.7 }}>
+              Fejlesztette: Jezsuita ifjúsági szervezet
+            </Typography>
+          </Stack>
+        </Container>
+      </Box>
+    </Box>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-      </Router>
-      <div className="content">
-        {/* <h1>Welcome to the React App</h1> */}
-        <div className="links">
-          <ul>
-            <li>
-              <a href="/flutter" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://via.placeholder.com/50x50?text=Web"
-                  alt="Web App"
-                  className="link-icon"
-                />
-                Go to Web App
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://play.google.com/store/apps"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://via.placeholder.com/50x50?text=Android"
-                  alt="Android App"
-                  className="link-icon"
-                />
-                Download Android App
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://apps.apple.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://via.placeholder.com/50x50?text=iOS"
-                  alt="iOS App"
-                  className="link-icon"
-                />
-                Download iOS App
-              </a>
-            </li>
-            <li>
-              <a href="/windows-download" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://via.placeholder.com/50x50?text=Windows"
-                  alt="Windows App"
-                  className="link-icon"
-                />
-                Download Windows App
-              </a>
-            </li>
-            <li>
-              <a href="/linux-download" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://via.placeholder.com/50x50?text=Linux"
-                  alt="Linux App"
-                  className="link-icon"
-                />
-                Download Linux App
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="divider-sm"></div>
-              <ul class="nav nav-tabs" id="iconNav" role="tablist">
-                <li class="nav-item" data-platform="windows" role="tab">
-                    <a class="nav-link" id="windows-nav-link" href="/en/downloads/windows" role="tab" data-platform="windows">
-                      <img src="/_static/img/icons/windows-logo.svg" id="windows-nav-icon" alt="" title="Windows"/>
-                      <p>Windows</p>
-                    </a>
-                </li>
-                <li class="nav-item" data-platform="mac" role="tab">
-                    <a class="nav-link" id="mac-nav-link" href="/en/downloads/mac-os" role="tab" data-platform="mac">
-                      <img src="/_static/img/icons/mac-logo.svg" id="mac-nav-icon" alt="" title="macOS"/>
-                      <p>macOS</p>
-                    </a>
-                </li>
-                <li class="nav-item" data-platform="android" role="tab">
-                    <a class="nav-link" id="android-nav-link" href="/en/downloads/android" role="tab" data-platform="android">
-                      <img src="/src/assets/android-logo-red-orange.svg" id="android-nav-icon" alt="" title="Android"/>
-                      <p>Android</p>
-                    </a>
-                 </li>
-                <li class="nav-item" data-platform="ios" role="tab">
-                    <a class="nav-link" id="ios-nav-link" href="/en/downloads/ios" role="tab" data-platform="ios">
-                      <img src="/_static/img/icons/ios-logo.svg" id="ios-nav-icon" alt="" title="iOS"/>
-                      <p>iOS</p>
-                    </a>
-                </li>
-                <li class="nav-item" data-platform="appletv" role="tab">
-                    <a class="nav-link" id="appletv-nav-link" href="/en/downloads/apple-tv" role="tab" data-platform="appletv">
-                      <img src="/_static/img/icons/appletv-logo.svg" id="appletv-nav-icon" alt="" title="Apple TV"/>
-                      <p>Apple TV</p>
-                    </a>
-                  </li>
-                <li class="nav-item" data-platform="linux" role="tab">
-                    <a class="nav-link" id="linux-nav-link" href="/en/downloads/linux" role="tab" data-platform="linux">
-                      <img src="/_static/img/icons/linux-logo.svg" id="linux-nav-icon" alt="" title="Linux"/>
-                      <p>Linux</p>
-                    </a>
-                  </li>
-                <li class="nav-item" data-platform="chrome" role="tab">
-                    <a class="nav-link" id="chrome-nav-link" href="/en/downloads/chrome-os" role="tab" data-platform="chrome">
-                      <img src="/_static/img/icons/chrome-logo.svg" id="chrome-nav-icon" alt="" title="Chrome OS"/>
-                      <p>Chrome OS</p>
-                    </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="categories" element={<CategoriesPage />} />
+          <Route path="prayers" element={<PrayersPage />} />
+          <Route path="steps" element={<StepsPage />} />
+          <Route path="media" element={<MediaPage />} />
+        </Route>
+        <Route path="/*" element={<LandingPage />} />
+      </Routes>
+    </Router>
   );
 }
 

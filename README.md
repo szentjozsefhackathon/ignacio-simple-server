@@ -12,12 +12,12 @@ This is a simple Node.js server implementation to serve JSON database, images, a
 
 2. Build docker projects with docker-compose:
    ```sh
-   docker-compose build
+   docker compose build
    ```
 
 3. Start the servers with docker-compose:
    ```sh
-   docker-compose up -d
+   docker compose up -d
    ```
 
 4. The servers will be running at [`http://localhost`](http://localhost).

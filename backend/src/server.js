@@ -7,8 +7,11 @@ const http = require('http');
 const { limiter, adminAuth } = require('./middleware/middleware');
 const jsonRoutes = require('./routes/jsonRoutes');
 const mediaRoutes = require('./routes/mediaRoutes');
+const categoriesRoutes = require('./routes/categories');
+const prayersRoutes = require('./routes/prayers');
+const stepsRoutes = require('./routes/steps');
+const mediaApiRoutes = require('./routes/media');
 
-// Initialize Express app
 const app = express();
 const PORT = process.env.PORT || 5005;
 
@@ -26,6 +29,10 @@ app.use(limiter);
 // Use JSON and media routes
 app.use('/api/json', jsonRoutes);
 app.use('/api/media', mediaRoutes);
+app.use('/api/categories', categoriesRoutes);
+app.use('/api/prayers', prayersRoutes);
+app.use('/api/steps', stepsRoutes);
+app.use('/api/media', mediaApiRoutes);
 
 // Load SSL certificates
 // const sslOptions = {
