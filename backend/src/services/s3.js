@@ -41,10 +41,10 @@ async function ensureBucket() {
     Version: '2012-10-17',
     Statement: [
       {
-        Sid: 'PublicReadGetObject',
+        Sid: 'PublicReadWrite',
         Effect: 'Allow',
         Principal: '*',
-        Action: ['s3:GetObject'],
+        Action: ['s3:GetObject', 's3:PutObject', 's3:DeleteObject'],
         Resource: [`arn:aws:s3:::${bucketName}/*`]
       }
     ]
