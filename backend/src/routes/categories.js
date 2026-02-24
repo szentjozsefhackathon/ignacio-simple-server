@@ -1,125 +1,70 @@
 const express = require('express');
 const router = express.Router();
-const fs = require('fs');
-const path = require('path');
+const categoryRepository = require('../repositories/categoryRepository');
 
-const dataFilePath = path.join(__dirname, '../data/data.json');
-
-function readData() {
+router.get('/', async (req, res) => {
   try {
-    const data = fs.readFileSync(dataFilePath, 'utf8');
-    return JSON.parse(data);
-  } catch (err) {
-    console.error('Error reading data:', err);
-    return [];
-  }
-}
-
-function writeData(data) {
-  try {
-    fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2), 'utf8');
-    return true;
-  } catch (err) {
-    console.error('Error writing data:', err);
-    return false;
-  }
-}
-
-router.get('/', (req, res) => {
-  try {
-    const data = readData();
-    const categories = data.map((cat, index) => ({
-      id: index,
-      title: cat.title,
-      image: cat.image,
-      prayerCount: cat.prayers ? cat.prayers.length : 0
-    }));
+    const categories = await categoryRepository.getAll();
     res.json(categories);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba az adatok betöltésekor' });
+    console.error('Error fetching categories:', err);
+    res.status(500).json({ error: 'Hiba az adatok betoltesekor' });
   }
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
-    const data = readData();
-    const id = parseInt(req.params.id);
-    if (id < 0 || id >= data.length) {
-      return res.status(404).json({ error: 'A kategória nem található' });
+    const category = await categoryRepository.getById(req.params.id);
+    if (!category) {
+      return res.status(404).json({ error: 'A kategoria nem talalhato' });
     }
-    res.json(data[id]);
+    res.json(category);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba az adatok betöltésekor' });
+    console.error('Error fetching category:', err);
+    res.status(500).json({ error: 'Hiba az adatok betoltesekor' });
   }
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { title, image } = req.body;
     if (!title) {
-      return res.status(400).json({ error: 'A cím kötelező' });
+      return res.status(400).json({ error: 'A cím kotelezo' });
     }
     
-    const data = readData();
-    const newCategory = {
-      title,
-      image: image || 'default.jpg',
-      prayers: []
-    };
-    
-    data.push(newCategory);
-    
-    if (writeData(data)) {
-      res.status(201).json({ id: data.length - 1, ...newCategory });
-    } else {
-      res.status(500).json({ error: 'Hiba az adatok mentésekor' });
-    }
+    const category = await categoryRepository.create({ title, image });
+    res.status(201).json(category);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a kategória létrehozásakor' });
+    console.error('Error creating category:', err);
+    res.status(500).json({ error: 'Hiba az adatok mentesekor' });
   }
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
-    const id = parseInt(req.params.id);
     const { title, image } = req.body;
-    const data = readData();
-    
-    if (id < 0 || id >= data.length) {
-      return res.status(404).json({ error: 'A kategória nem található' });
+    const category = await categoryRepository.update(req.params.id, { title, image });
+    if (!category) {
+      return res.status(404).json({ error: 'A kategoria nem talalhato' });
     }
-    
-    if (title) data[id].title = title;
-    if (image) data[id].image = image;
-    
-    if (writeData(data)) {
-      res.json(data[id]);
-    } else {
-      res.status(500).json({ error: 'Hiba az adatok mentésekor' });
-    }
+    res.json(category);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a kategória frissítésekor' });
+    console.error('Error updating category:', err);
+    res.status(500).json({ error: 'Hiba az adatok frissitesekor' });
   }
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
-    const id = parseInt(req.params.id);
-    const data = readData();
-    
-    if (id < 0 || id >= data.length) {
-      return res.status(404).json({ error: 'A kategória nem található' });
+    const id = parseInt(req.params.id, 10);
+    if (isNaN(id)) {
+      return res.status(400).json({ error: 'Ervenytelen azonosito' });
     }
-    
-    data.splice(id, 1);
-    
-    if (writeData(data)) {
-      res.json({ message: 'Kategória törölve' });
-    } else {
-      res.status(500).json({ error: 'Hiba az adatok mentésekor' });
-    }
+    await categoryRepository.delete(id);
+    res.json({ message: 'Kategoria torolve' });
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a kategória törlésekor' });
+    console.error('Error deleting category:', err);
+    res.status(500).json({ error: 'Hiba a kategoria torleskor' });
   }
 });
 

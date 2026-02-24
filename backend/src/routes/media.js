@@ -2,31 +2,9 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const fs = require('fs');
+const mediaRepository = require('../repositories/mediaRepository');
 
-const mediaDir = path.join(__dirname, '../../media');
-
-function generateUUID() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    const r = Math.random() * 16 | 0;
-    const v = c === 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
-}
-
-if (!fs.existsSync(mediaDir)) {
-  fs.mkdirSync(mediaDir, { recursive: true });
-}
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, mediaDir);
-  },
-  filename: (req, file, cb) => {
-    const uniqueName = `${generateUUID()}${path.extname(file.originalname)}`;
-    cb(null, uniqueName);
-  }
-});
+const storage = multer.memoryStorage();
 
 const upload = multer({
   storage,
@@ -38,106 +16,66 @@ const upload = multer({
     if (extname && mimetype) {
       return cb(null, true);
     }
-    cb(new Error('Csak képek és hangfájlok engedélyezettek'));
+    cb(new Error('Csak kepek es hangfajlok engedelyezettek'));
   }
 });
 
-router.post('/upload', upload.single('file'), (req, res) => {
+router.post('/upload', upload.single('file'), async (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).json({ error: 'Nincs fájl feltöltve' });
+      return res.status(400).json({ error: 'Nincs fajl feltoltve' });
     }
     
-    const fileInfo = {
-      filename: req.file.filename,
-      originalName: req.file.originalname,
-      path: `/media/${req.file.filename}`,
-      size: req.file.size,
-      mimetype: req.file.mimetype,
-      createdAt: new Date().toISOString()
-    };
+    const result = await mediaRepository.upload(
+      req.file.buffer,
+      req.file.originalname,
+      req.file.mimetype
+    );
     
-    res.status(201).json(fileInfo);
+    res.status(201).json(result);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a fájl feltöltésekor' });
+    console.error('Error uploading file:', err);
+    res.status(500).json({ error: 'Hiba a fajl feltolteskor' });
   }
 });
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    if (!fs.existsSync(mediaDir)) {
-      return res.json([]);
-    }
-    
-    const files = fs.readdirSync(mediaDir);
-    const fileInfos = files.map(file => {
-      const stats = fs.statSync(path.join(mediaDir, file));
-      const ext = path.extname(file).toLowerCase();
-      const isImage = ['.jpg', '.jpeg', '.png', '.gif'].includes(ext);
-      const isAudio = ['.mp3', '.wav', '.ogg', '.m4a', '.webm'].includes(ext);
-      
-      return {
-        filename: file,
-        path: `/media/${file}`,
-        size: stats.size,
-        type: isImage ? 'image' : isAudio ? 'audio' : 'other',
-        createdAt: stats.birthtime
-      };
-    });
-    
-    res.json(fileInfos);
+    const media = await mediaRepository.getAll();
+    res.json(media);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a fájlok betöltésekor' });
+    console.error('Error fetching media:', err);
+    res.status(500).json({ error: 'Hiba a fajlok betoltesekor' });
   }
 });
 
-router.delete('/:filename', (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
-    const filename = req.params.filename;
-    const filePath = path.join(mediaDir, filename);
-    
-    if (!fs.existsSync(filePath)) {
-      return res.status(404).json({ error: 'A fájl nem található' });
+    const id = parseInt(req.params.id, 10);
+    if (isNaN(id)) {
+      return res.status(400).json({ error: 'Ervenytelen azonosito' });
     }
-    
-    fs.unlinkSync(filePath);
-    res.json({ message: 'Fájl törölve' });
+    await mediaRepository.delete(id);
+    res.json({ message: 'Fajl torolve' });
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a fájl törlésekor' });
+    console.error('Error deleting media:', err);
+    res.status(500).json({ error: 'Hiba a fajl torleskor' });
   }
 });
 
-router.get('/list', (req, res) => {
+router.get('/list', async (req, res) => {
   try {
     const type = req.query.type;
-    
-    if (!fs.existsSync(mediaDir)) {
-      return res.json([]);
-    }
-    
-    const files = fs.readdirSync(mediaDir);
-    let fileInfos = files.map(file => {
-      const stats = fs.statSync(path.join(mediaDir, file));
-      const ext = path.extname(file).toLowerCase();
-      const isImage = ['.jpg', '.jpeg', '.png', '.gif'].includes(ext);
-      const isAudio = ['.mp3', '.wav', '.ogg', '.m4a', '.webm'].includes(ext);
-      
-      return {
-        filename: file,
-        path: `/media/${file}`,
-        size: stats.size,
-        type: isImage ? 'image' : isAudio ? 'audio' : 'other',
-        createdAt: stats.birthtime
-      };
-    });
+    let media = await mediaRepository.getAll();
     
     if (type) {
-      fileInfos = fileInfos.filter(f => f.type === type);
+      media = media.filter(m => m.media_type === type);
     }
     
-    res.json(fileInfos);
+    res.json(media);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a fájlok betöltésekor' });
+    console.error('Error listing media:', err);
+    res.status(500).json({ error: 'Hiba a fajlok betoltesekor' });
   }
 });
 

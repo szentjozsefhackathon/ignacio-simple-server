@@ -1,178 +1,72 @@
 const express = require('express');
 const router = express.Router();
-const fs = require('fs');
-const path = require('path');
+const stepRepository = require('../repositories/stepRepository');
 
-const dataFilePath = path.join(__dirname, '../data/data.json');
-
-function readData() {
+router.get('/prayer/:prayerId', async (req, res) => {
   try {
-    const data = fs.readFileSync(dataFilePath, 'utf8');
-    return JSON.parse(data);
-  } catch (err) {
-    console.error('Error reading data:', err);
-    return [];
-  }
-}
-
-function writeData(data) {
-  try {
-    fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2), 'utf8');
-    return true;
-  } catch (err) {
-    console.error('Error writing data:', err);
-    return false;
-  }
-}
-
-router.get('/prayer/:prayerId', (req, res) => {
-  try {
-    const prayerId = parseInt(req.params.prayerId);
-    const data = readData();
-    
-    let found = false;
-    let steps = [];
-    
-    for (let catIndex = 0; catIndex < data.length; catIndex++) {
-      if (data[catIndex].prayers && data[catIndex].prayers[prayerId]) {
-        steps = data[catIndex].prayers[prayerId].steps || [];
-        steps = steps.map((step, index) => ({ id: index, ...step }));
-        found = true;
-        break;
-      }
-    }
-    
-    if (!found) {
-      return res.status(404).json({ error: 'Az ima nem található' });
-    }
-    
+    const steps = await stepRepository.getByPrayer(req.params.prayerId);
     res.json(steps);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba az adatok betöltésekor' });
+    console.error('Error fetching steps:', err);
+    res.status(500).json({ error: 'Hiba az adatok betoltesekor' });
   }
 });
 
-router.post('/prayer/:prayerId', (req, res) => {
+router.post('/prayer/:prayerId', async (req, res) => {
   try {
-    const prayerId = parseInt(req.params.prayerId);
     const { description, timeInSeconds, type, voices } = req.body;
     
     if (!description) {
-      return res.status(400).json({ error: 'A leírás kötelező' });
+      return res.status(400).json({ error: 'A leiras kotelezo' });
     }
     
-    const data = readData();
-    let found = false;
-    let categoryIndex = -1;
+    const step = await stepRepository.create(req.params.prayerId, {
+      description,
+      timeInSeconds,
+      type,
+      voices
+    });
     
-    for (let catIndex = 0; catIndex < data.length; catIndex++) {
-      if (data[catIndex].prayers && data[catIndex].prayers[prayerId]) {
-        const newStep = {
-          description,
-          voices: voices || [],
-          timeInSeconds: timeInSeconds || 60,
-          type: type || 'FIX'
-        };
-        
-        if (!data[catIndex].prayers[prayerId].steps) {
-          data[catIndex].prayers[prayerId].steps = [];
-        }
-        
-        data[catIndex].prayers[prayerId].steps.push(newStep);
-        categoryIndex = catIndex;
-        found = true;
-        break;
-      }
-    }
-    
-    if (!found) {
-      return res.status(404).json({ error: 'Az ima nem található' });
-    }
-    
-    if (writeData(data)) {
-      const newId = data[categoryIndex].prayers[prayerId].steps.length - 1;
-      res.status(201).json({ id: newId, ...data[categoryIndex].prayers[prayerId].steps[newId] });
-    } else {
-      res.status(500).json({ error: 'Hiba az adatok mentésekor' });
-    }
+    res.status(201).json(step);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a lépés létrehozásakor' });
+    console.error('Error creating step:', err);
+    res.status(500).json({ error: 'Hiba az adatok mentesekor' });
   }
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
-    const stepId = parseInt(req.params.id);
-    const { description, timeInSeconds, type, voices } = req.body;
-    const data = readData();
+    const { description, timeInSeconds, type, voices, stepOrder } = req.body;
+    const step = await stepRepository.update(req.params.id, {
+      description,
+      timeInSeconds,
+      type,
+      voices,
+      stepOrder
+    });
     
-    let found = false;
-    let categoryIndex = -1;
-    
-    for (let catIndex = 0; catIndex < data.length; catIndex++) {
-      if (data[catIndex].prayers) {
-        for (let p = 0; p < data[catIndex].prayers.length; p++) {
-          if (data[catIndex].prayers[p].steps && data[catIndex].prayers[p].steps[stepId]) {
-            if (description) data[catIndex].prayers[p].steps[stepId].description = description;
-            if (timeInSeconds) data[catIndex].prayers[p].steps[stepId].timeInSeconds = timeInSeconds;
-            if (type) data[catIndex].prayers[p].steps[stepId].type = type;
-            if (voices) data[catIndex].prayers[p].steps[stepId].voices = voices;
-            categoryIndex = catIndex;
-            found = true;
-            break;
-          }
-        }
-      }
-      if (found) break;
+    if (!step) {
+      return res.status(404).json({ error: 'A lepes nem talalhato' });
     }
     
-    if (!found) {
-      return res.status(404).json({ error: 'A lépés nem található' });
-    }
-    
-    if (writeData(data)) {
-      res.json(data[categoryIndex].prayers.map(p => p.steps).flat()[stepId]);
-    } else {
-      res.status(500).json({ error: 'Hiba az adatok mentésekor' });
-    }
+    res.json(step);
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a lépés frissítésekor' });
+    console.error('Error updating step:', err);
+    res.status(500).json({ error: 'Hiba az adatok frissitesekor' });
   }
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
-    const stepId = parseInt(req.params.id);
-    const data = readData();
-    
-    let found = false;
-    let prayerIndex = -1;
-    
-    for (let catIndex = 0; catIndex < data.length; catIndex++) {
-      if (data[catIndex].prayers) {
-        for (let p = 0; p < data[catIndex].prayers.length; p++) {
-          if (data[catIndex].prayers[p].steps && data[catIndex].prayers[p].steps[stepId]) {
-            data[catIndex].prayers[p].steps.splice(stepId, 1);
-            prayerIndex = p;
-            found = true;
-            break;
-          }
-        }
-      }
-      if (found) break;
+    const id = parseInt(req.params.id, 10);
+    if (isNaN(id)) {
+      return res.status(400).json({ error: 'Ervenytelen azonosito' });
     }
-    
-    if (!found) {
-      return res.status(404).json({ error: 'A lépés nem található' });
-    }
-    
-    if (writeData(data)) {
-      res.json({ message: 'Lépés törölve' });
-    } else {
-      res.status(500).json({ error: 'Hiba az adatok mentésekor' });
-    }
+    await stepRepository.delete(id);
+    res.json({ message: 'Lepes torolve' });
   } catch (err) {
-    res.status(500).json({ error: 'Hiba a lépés törlésekor' });
+    console.error('Error deleting step:', err);
+    res.status(500).json({ error: 'Hiba a lepes torleskor' });
   }
 });
 

@@ -38,3 +38,6 @@ frontend/public/*
 *.wav
 *.ogg
 
+# Data (development)
+backend/src/data/
+

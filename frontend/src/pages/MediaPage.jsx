@@ -56,10 +56,10 @@ export default function MediaPage() {
     }
   };
 
-  const handleDelete = async (filename) => {
-    if (window.confirm(`Biztosan törölni szeretnéd a "${filename}" fájlt?`)) {
+  const handleDelete = async (id) => {
+    if (window.confirm('Biztosan törölni szeretnéd ezt a fájlt?')) {
       try {
-        await axios.delete(`${API_URL}/media/${filename}`);
+        await axios.delete(`${API_URL}/media/${id}`);
         fetchFiles();
       } catch (error) {
         console.error('Hiba a fájl törlésekor:', error);
@@ -69,13 +69,13 @@ export default function MediaPage() {
 
   const filteredFiles = files.filter((file) => {
     if (tabValue === 0) return true;
-    if (tabValue === 1) return file.type === 'image';
-    if (tabValue === 2) return file.type === 'audio';
+    if (tabValue === 1) return file.media_type === 'image';
+    if (tabValue === 2) return file.media_type === 'voice';
     return true;
   });
 
-  const imageFiles = files.filter(f => f.type === 'image');
-  const audioFiles = files.filter(f => f.type === 'audio');
+  const imageFiles = files.filter(f => f.media_type === 'image');
+  const audioFiles = files.filter(f => f.media_type === 'voice');
 
   return (
     <Box>
@@ -110,19 +110,19 @@ export default function MediaPage() {
       ) : (
         <Grid container spacing={3}>
           {filteredFiles.map((file) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={file.filename}>
+            <Grid item xs={12} sm={6} md={4} lg={3} key={file.id}>
               <Card>
-                {file.type === 'image' ? (
+                {file.media_type === 'image' ? (
                   <CardMedia
                     component="img"
                     height="140"
-                    image={`http://localhost:5005${file.path}`}
+                    image={file.url}
                     alt={file.filename}
                   />
                 ) : (
                   <Box sx={{ height: 140, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: '#f5f5f5' }}>
                     <Typography variant="h6" color="text.secondary">
-                      🔊 {file.type}
+                      🔊 {file.media_type}
                     </Typography>
                   </Box>
                 )}
@@ -131,7 +131,7 @@ export default function MediaPage() {
                     {file.filename}
                   </Typography>
                   <Typography variant="caption" color="text.secondary">
-                    {(file.size / 1024).toFixed(1)} KB
+                    {(file.size_bytes / 1024).toFixed(1)} KB
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -139,7 +139,7 @@ export default function MediaPage() {
                     size="small"
                     color="error"
                     startIcon={<DeleteIcon />}
-                    onClick={() => handleDelete(file.filename)}
+                    onClick={() => handleDelete(file.id)}
                   >
                     Törlés
                   </Button>

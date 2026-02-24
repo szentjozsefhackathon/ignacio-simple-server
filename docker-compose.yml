@@ -5,18 +5,56 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
+    depends_on:
+      - backend
+
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     ports:
       - "5005:5005"
-  # flutter-web:
-  #   build:
-  #     context: ./flutter-web
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "8080:80"
+    depends_on:
+      - postgres
+      - redis
+      - minio
+    environment:
+      - DATABASE_URL=postgres://ignacio:ignacio@postgres:5432/ignacio
+      - REDIS_URL=redis://:redis@redis:6379
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - MINIO_BUCKET=ignacio-media
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: ignacio
+      POSTGRES_USER: ignacio
+      POSTGRES_PASSWORD: ignacio
+    volumes:
+      - ./backend/src/data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes --requirepass redis
+    ports:
+      - "6379:6379"
+
+  minio:
+    image: minio/minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - ./backend/src/data/minio:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+
   nginx:
     build:
       context: ./nginx
@@ -26,4 +64,3 @@ services:
     depends_on:
       - frontend
       - backend
-      # - flutter-web

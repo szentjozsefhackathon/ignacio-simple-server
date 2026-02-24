@@ -13,7 +13,11 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 import "./App.css";
 
 function ProtectedAdminRoute() {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) {
+    return null;
+  }
   
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
@@ -212,7 +216,11 @@ function App() {
 }
 
 function ProtectedRouteWithLayout() {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) {
+    return null;
+  }
   
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
