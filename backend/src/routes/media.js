@@ -79,4 +79,38 @@ router.get('/list', async (req, res) => {
   }
 });
 
+router.get('/images/:name', async (req, res) => {
+  try {
+    const filename = req.params.name;
+    const result = await mediaRepository.getFileStream(filename, 'image');
+    
+    if (!result) {
+      return res.status(404).json({ error: 'Kep nem talalhato' });
+    }
+    
+    res.set('Content-Type', result.mimeType);
+    result.stream.pipe(res);
+  } catch (err) {
+    console.error('Error serving image:', err);
+    res.status(500).json({ error: 'Hiba a kep kiszolgalasakor' });
+  }
+});
+
+router.get('/voices/:name', async (req, res) => {
+  try {
+    const filename = req.params.name;
+    const result = await mediaRepository.getFileStream(filename, 'voice');
+    
+    if (!result) {
+      return res.status(404).json({ error: 'Hangfajl nem talalhato' });
+    }
+    
+    res.set('Content-Type', result.mimeType);
+    result.stream.pipe(res);
+  } catch (err) {
+    console.error('Error serving voice:', err);
+    res.status(500).json({ error: 'Hiba a hangfajl kiszolgalasakor' });
+  }
+});
+
 module.exports = router;

@@ -36,7 +36,7 @@ function Navbar() {
               gap: 1
             }}
           >
-            ☥ Ignáci imák
+            Ignáci imák
           </Typography>
           <Box>
             {isAuthenticated ? (

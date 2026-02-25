@@ -76,7 +76,7 @@ async function uploadFile(fileBuffer, filename, contentType) {
 
   return {
     key,
-    url: `http://localhost:9000/${bucketName}/${key}`
+    url: `${process.env.MINIO_PUBLIC_URL || `http://${process.env.MINIO_ENDPOINT || 'localhost:9000'}`}/${bucketName}/${key}`
   };
 }
 
@@ -109,9 +109,25 @@ async function listFiles(prefix = 'uploads/') {
   }
 }
 
+async function getFile(key) {
+  const client = getS3Client();
+  
+  try {
+    const response = await client.send(new GetObjectCommand({
+      Bucket: bucketName,
+      Key: key
+    }));
+    
+    return response.Body;
+  } catch (error) {
+    console.log('Error getting file:', error.message);
+    throw error;
+  }
+}
+
 async function getFileUrl(key) {
   getS3Client();
-  return `http://localhost:9000/${bucketName}/${key}`;
+  return `${process.env.MINIO_PUBLIC_URL || `http://${process.env.MINIO_ENDPOINT || 'localhost:9000'}`}/${bucketName}/${key}`;
 }
 
 module.exports = {
@@ -120,5 +136,6 @@ module.exports = {
   uploadFile,
   deleteFile,
   listFiles,
+  getFile,
   getFileUrl
 };

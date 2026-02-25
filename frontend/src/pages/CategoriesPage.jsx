@@ -20,7 +20,7 @@ import {
 } from '@mui/material';
 import { Delete as DeleteIcon, Edit as EditIcon, Add as AddIcon } from '@mui/icons-material';
 
-const API_URL = 'http://localhost:5005/api';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005/api';
 
 export default function CategoriesPage() {
   const [categories, setCategories] = useState([]);

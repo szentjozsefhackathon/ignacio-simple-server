@@ -1,5 +1,5 @@
 const db = require('../db/connection');
-const { uploadFile, deleteFile, listFiles, getFileUrl } = require('../services/s3');
+const { uploadFile, deleteFile, listFiles, getFileUrl, getFile } = require('../services/s3');
 const { cacheGet, cacheSet, cacheDelete } = require('../services/redis');
 
 const CACHE_TTL = 300;
@@ -33,6 +33,24 @@ const mediaRepository = {
       ...m,
       url: await getFileUrl(m.s3_key)
     })));
+  },
+
+  async getByFilename(filename, mediaType) {
+    let query = db('media').where('filename', filename);
+    
+    if (mediaType) {
+      query = query.where('media_type', mediaType);
+    }
+    
+    return await query.first();
+  },
+
+  async getFileStream(filename, mediaType) {
+    const media = await this.getByFilename(filename, mediaType);
+    if (!media) return null;
+    
+    const stream = await getFile(media.s3_key);
+    return { stream, mimeType: media.mime_type };
   },
 
   async upload(buffer, filename, contentType) {

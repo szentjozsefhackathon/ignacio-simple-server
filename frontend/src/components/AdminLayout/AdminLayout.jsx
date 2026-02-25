@@ -61,7 +61,7 @@ export default function AdminLayout({ children }) {
             component="div" 
             sx={{ fontWeight: 700, letterSpacing: 0.5 }}
           >
-            ☥ Ignáci imák - Admin CMS
+            Ignáci imák - Admin CMS
           </Typography>
         </Toolbar>
       </AppBar>

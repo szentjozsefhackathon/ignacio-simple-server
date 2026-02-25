@@ -187,7 +187,7 @@ function LandingPage() {
         <Container maxWidth="lg">
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="space-between" alignItems="center">
             <Typography variant="body2">
-              ☥ Ignáci imák - Jezsuita lelkiség
+              Ignáci imák - Jezsuita lelkiség
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.7 }}>
               Fejlesztette: Jezsuita ifjúsági szervezet
