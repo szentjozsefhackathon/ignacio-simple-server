@@ -39,8 +39,10 @@ jobs:
           context: ./backend
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/ignacio-backend:latest
-            ghcr.io/${{ github.repository_owner }}/ignacio-backend:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/ignacio-simple-server-backend:latest
+            ghcr.io/${{ github.repository_owner }}/ignacio-simple-server-backend:${{ github.sha }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
 
       - name: Build and Push Frontend
         uses: docker/build-push-action@v5
@@ -48,15 +50,17 @@ jobs:
           context: ./frontend
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/ignacio-frontend:latest
-            ghcr.io/${{ github.repository_owner }}/ignacio-frontend:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/ignacio-simple-server-frontend:latest
+            ghcr.io/${{ github.repository_owner }}/ignacio-simple-server-frontend:${{ github.sha }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
 
 
       # 5. Confirm Success
       - name: Verify Image
         run: |
           echo "Docker image has been pushed to:"
-          echo "ghcr.io/${{ github.repository_owner }}/ignacio-backend:latest"
-          echo "ghcr.io/${{ github.repository_owner }}/ignacio-backend:${{ github.sha }}"
-          echo "ghcr.io/${{ github.repository_owner }}/ignacio-frontend:latest"
-          echo "ghcr.io/${{ github.repository_owner }}/ignacio-frontend:${{ github.sha }}"
+          echo "ghcr.io/${{ github.repository_owner }}/ignacio-simple-server-backend:latest"
+          echo "ghcr.io/${{ github.repository_owner }}/ignacio-simple-server-backend:${{ github.sha }}"
+          echo "ghcr.io/${{ github.repository_owner }}/ignacio-simple-server-frontend:latest"
+          echo "ghcr.io/${{ github.repository_owner }}/ignacio-simple-server-frontend:${{ github.sha }}"
