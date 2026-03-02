@@ -1,22 +1,20 @@
-# Step 1: Use Node.js for building the React app
-FROM node:18-alpine
+FROM node:18-alpine AS builder
 
-# Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package.json ./
-COPY package-lock.json ./
+COPY package.json package-lock.json ./
+RUN npm ci
 
-
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the app source code
 COPY . .
-
-# Build the React app
 RUN npm run build
 
+FROM nginx:alpine
+
+RUN apk add --no-cache wget
+
+COPY --from=builder /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 3000
-CMD ["npm", "start"]
+
+CMD ["nginx", "-g", "daemon off;"]

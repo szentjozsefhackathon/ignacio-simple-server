@@ -23,6 +23,10 @@ app.use(express.json());
 
 app.use(limiter);
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
 app.use('/api/json', jsonRoutes);
 app.use('/api/media', mediaRoutes);
 app.use('/api/auth', authRoutes);
