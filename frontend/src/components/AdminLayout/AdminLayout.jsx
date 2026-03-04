@@ -24,6 +24,7 @@ import {
   Logout as LogoutIcon,
 } from '@mui/icons-material';
 import { useAuth } from '../../context/AuthContext';
+import logo from "../../assets/icon_foreground.png";
 
 const drawerWidth = 260;
 
@@ -52,17 +53,21 @@ export default function AdminLayout({ children }) {
         sx={{ 
           zIndex: (theme) => theme.zIndex.drawer + 1,
           bgcolor: 'primary.main',
+          borderRadius: 0,
         }}
       >
         <Toolbar>
-          <Typography 
-            variant="h6" 
-            noWrap 
-            component="div" 
-            sx={{ fontWeight: 700, letterSpacing: 0.5 }}
-          >
-            Ignáci imák - Admin CMS
-          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Box 
+              component="img"
+              src={logo} 
+              alt="Ignáci imák" 
+              sx={{ width: 32, height: 32 }}
+            />
+            <Typography variant="h6" noWrap sx={{ fontWeight: 700, letterSpacing: 0.5 }}>
+              Ignáci imák - Admin CMS
+            </Typography>
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer

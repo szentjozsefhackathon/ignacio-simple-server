@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from "react-router-dom";
-import { Box, Container, Typography, Grid, Card, CardContent, CardActionArea, Stack, Chip } from "@mui/material";
-import { Android, PhoneIphone, Computer, Language } from "@mui/icons-material";
+import { Box, Container, Typography, Grid, Card, CardContent, CardActionArea, Stack, Chip, Link } from "@mui/material";
+import { Android, PhoneIphone, Computer, Language, GitHub } from "@mui/icons-material";
 import Navbar from "./components/Navbar/Navbar";
 import LoginPage from "./components/LoginPage/LoginPage";
 import AdminLayout from "./components/AdminLayout/AdminLayout";
@@ -49,13 +49,13 @@ function LandingPage() {
       href: "https://apps.apple.com",
       external: true,
     },
-    {
-      title: "Windows",
-      description: "Windows alkalmazás",
-      icon: <Computer sx={{ fontSize: 48, color: "#8B0000" }} />,
-      href: "#",
-      external: false,
-    },
+    // {
+    //   title: "Windows",
+    //   description: "Windows alkalmazás",
+    //   icon: <Computer sx={{ fontSize: 48, color: "#8B0000" }} />,
+    //   href: "#",
+    //   external: false,
+    // },
   ];
 
   return (
@@ -76,11 +76,10 @@ function LandingPage() {
             Ignáci imák
           </Typography>
           <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
-            Lelki gyakorlatok Szent Ignác nyomdokain
+            Különböző imamódok Szent Ignác nyomdokain
           </Typography>
           <Typography variant="body1" sx={{ maxWidth: 600, mx: "auto", opacity: 0.85 }}>
-            Találj időt a csendben lévésre, és fedezd fel az imádság 
-            erejét a mindennapokban. Töltsd le az alkalmazást, vagy 
+            Ha szeretnél egy kicsit elcsendesedni, jelen lenni, időt adni magadnak és a jó Istennek, és ehhez jól jönne egy kis segítség. Töltsd le az alkalmazást, vagy 
             használd webes verziónkat.
           </Typography>
         </Container>
@@ -89,7 +88,7 @@ function LandingPage() {
       {/* App Download Section */}
       <Container maxWidth="lg" sx={{ pb: 8 }}>
         <Typography variant="h4" component="h2" gutterBottom sx={{ mb: 4, textAlign: "center", color: "text.primary" }}>
-          Használd az alkalmazást
+          Próbáld ki az alkalmazást
         </Typography>
         <Grid container spacing={3} justifyContent="center">
           {appLinks.map((link, index) => (
@@ -119,13 +118,13 @@ function LandingPage() {
                     <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
                       {link.description}
                     </Typography>
-                    {link.external && (
+                    {/* {link.external && (
                       <Chip 
                         label="Külső link" 
                         size="small" 
                         sx={{ mt: 2, fontSize: '0.7rem' }} 
                       />
-                    )}
+                    )} */}
                   </CardContent>
                 </CardActionArea>
               </Card>
@@ -143,11 +142,10 @@ function LandingPage() {
               <Card sx={{ height: '100%', p: 1 }}>
                 <CardContent>
                   <Typography variant="h6" gutterBottom color="primary" fontWeight={600}>
-                    Lelki gyakorlatok
+                    Különböző imamódok
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Vezetett meditációk, Szent Ignác-i szemlélődési 
-                    gyakorlatok, és mindennapi imádságok.
+                    Vezetett imák, Szent Ignác-i szemlélődés, ritmikus ima és mindennapi imádságok. 
                   </Typography>
                 </CardContent>
               </Card>
@@ -156,7 +154,20 @@ function LandingPage() {
               <Card sx={{ height: '100%', p: 1 }}>
                 <CardContent>
                   <Typography variant="h6" gutterBottom color="primary" fontWeight={600}>
-                    Hangvezérelt ima
+                    Beállítható ima hossz
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Határozd el előre mennyi időt tudsz szánni az imára.
+                    (Nem hagyjuk, hogy az értesítések kiszakítsanak).
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Card sx={{ height: '100%', p: 1 }}>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom color="primary" fontWeight={600}>
+                    Felolvasó által vezetett imák
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Választhatsz férfi vagy női hangok között, 
@@ -172,7 +183,7 @@ function LandingPage() {
                     Napi reflexió
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Esti ima és lelki vizsgálat (examen) 
+                    Esti ima és lelkiismeret vizsgálat (examen) 
                     segítenek a nap tudatos lezárásában.
                   </Typography>
                 </CardContent>
@@ -180,18 +191,49 @@ function LandingPage() {
             </Grid>
           </Grid>
         </Box>
+
+        {/* Imamódok link */}
+        <Box sx={{ mt: 4, mb: 4 }}>
+          <Typography variant="body1" sx={{ textAlign: 'center' }}>
+            Ha többet szeretnél megtudni az imamódokról, látogass el{' '}
+            <Link href="https://manreza.hu/menu/nagybojti-online-lelkigyakorlat-imamodok" target="_blank" rel="noopener noreferrer">
+              ide
+            </Link>
+            .
+          </Typography>
+        </Box>
       </Container>
 
       {/* Footer */}
       <Box sx={{ bgcolor: '#333', color: 'white', py: 4, mt: 'auto' }}>
         <Container maxWidth="lg">
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="space-between" alignItems="center">
-            <Typography variant="body2">
-              Ignáci imák - Jezsuita lelkiség
-            </Typography>
-            <Typography variant="body2" sx={{ opacity: 0.7 }}>
-              Fejlesztette: Jezsuita ifjúsági szervezet
-            </Typography>
+            <Stack direction="row" spacing={2} alignItems="center">
+              <Typography variant="body2">
+                Ignáci imák - <Link href="https://ignacipedagogia.hu/" target="_blank" rel="noopener noreferrer" sx={{ color: 'white', textDecoration: 'underline' }}>Ignáci Pedagógiai Műhely</Link>
+              </Typography>
+              <Box 
+                component="a"
+                href="https://ignacipedagogia.hu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box 
+                  component="img"
+                  src="https://ignacipedagogia.hu/wp-content/uploads/2020/03/cropped-ipm-1-289x300.png" 
+                  alt="IPM Logo" 
+                  sx={{ width: 50, height: 'auto', borderRadius: 1 }}
+                />
+              </Box>
+            </Stack>
+            <Stack direction="row" spacing={1} alignItems="center">
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>
+                Fejlesztette: <Link href="https://github.com/szentjozsefhackathon" target="_blank" rel="noopener noreferrer" sx={{ color: 'white', textDecoration: 'underline' }}>Szent József Hackathon</Link>
+              </Typography>
+              <Link href="https://github.com/szentjozsefhackathon" target="_blank" rel="noopener noreferrer" sx={{ color: 'white' }}>
+                <GitHub />
+              </Link>
+            </Stack>
           </Stack>
         </Container>
       </Box>

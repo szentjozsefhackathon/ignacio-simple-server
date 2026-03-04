@@ -42,3 +42,6 @@ frontend/public/*
 # Data (development)
 backend/src/data/
 
+# build files
+build/*
+

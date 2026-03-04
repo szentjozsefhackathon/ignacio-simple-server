@@ -74,10 +74,10 @@ ignacio-simple-server/
 
 ### Credentials
 
-- **Admin CMS**: `marcell` / `Ignaci26`
-- **PostgreSQL**: `ignacio` / `ignacio`
-- **Redis**: password: `redis`
-- **MinIO**: `minioadmin` / `minioadmin`
+- **Admin CMS**: `<admin_user>` / `<admin_password>`
+- **PostgreSQL**: `<username>` / `<password>`
+- **Redis**: password: `<password>`
+- **MinIO**: `<access_key>` / `<secret_key>`
 
 ### Database Schema
 
@@ -164,17 +164,17 @@ docker compose build frontend && docker compose up -d frontend
 - `DELETE /api/media/:id` - Delete file
 
 ### Auth:
-- `POST /api/auth/login` - Login (marcell/Ignaci26)
+- `POST /api/auth/login` - Login (`<admin_user>` / `<admin_password>`)
 
 ## Environment Variables (backend/.env)
 
 ```
 PORT=5005
-DATABASE_URL=postgres://ignacio:ignacio@postgres:5432/ignacio
-REDIS_URL=redis://:redis@redis:6379
+DATABASE_URL=postgres://<user>:<password>@postgres:5432/ignacio
+REDIS_URL=redis://:<password>@redis:6379
 MINIO_ENDPOINT=minio:9000
-MINIO_ACCESS_KEY=minioadmin
-MINIO_SECRET_KEY=minioadmin
+MINIO_ACCESS_KEY=<access_key>
+MINIO_SECRET_KEY=<secret_key>
 MINIO_BUCKET=ignacio-media
 ```
 

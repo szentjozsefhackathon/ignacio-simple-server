@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Typography, Button, Box, Container } from "@mui/materi
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { Edit as EditIcon, Login as LoginIcon } from "@mui/icons-material";
+import logo from "../../assets/icon_foreground.png";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -22,8 +23,8 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" color="primary" elevation={0}>
-      <Container maxWidth="lg">
+    <AppBar position="static" color="primary" elevation={0} sx={{ borderRadius: 0 }}>
+      <Container maxWidth="lg" sx={{ borderRadius: 0 }}>
         <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           <Typography 
             variant="h6" 
@@ -36,6 +37,12 @@ function Navbar() {
               gap: 1
             }}
           >
+            <Box 
+              component="img"
+              src={logo} 
+              alt="Ignáci imák" 
+              sx={{ width: 32, height: 32 }}
+            />
             Ignáci imák
           </Typography>
           <Box>
