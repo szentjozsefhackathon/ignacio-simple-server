@@ -3,7 +3,8 @@ import { AppBar, Toolbar, Typography, Button, Box, Container } from "@mui/materi
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { Edit as EditIcon, Login as LoginIcon } from "@mui/icons-material";
-import logo from "../../assets/icon_foreground.png";
+
+const logoUrl = process.env.PUBLIC_URL + "/icon_foreground.png";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ function Navbar() {
           >
             <Box 
               component="img"
-              src={logo} 
+              src={logoUrl} 
               alt="Ignáci imák" 
               sx={{ width: 32, height: 32 }}
             />

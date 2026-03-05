@@ -24,7 +24,8 @@ import {
   Logout as LogoutIcon,
 } from '@mui/icons-material';
 import { useAuth } from '../../context/AuthContext';
-import logo from "../../assets/icon_foreground.png";
+
+const logoUrl = process.env.PUBLIC_URL + "/icon_foreground.png";
 
 const drawerWidth = 260;
 
@@ -60,7 +61,7 @@ export default function AdminLayout({ children }) {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <Box 
               component="img"
-              src={logo} 
+              src={logoUrl} 
               alt="Ignáci imák" 
               sx={{ width: 32, height: 32 }}
             />
