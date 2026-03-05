@@ -2,6 +2,8 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
+ARG REACT_APP_API_URL=/api
+
 COPY package.json package-lock.json ./
 RUN npm ci
 

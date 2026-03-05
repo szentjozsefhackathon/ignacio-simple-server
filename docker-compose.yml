@@ -8,6 +8,9 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_URL=/api
+        - PUBLIC_URL=/
     restart: always
     mem_limit: 64m
 

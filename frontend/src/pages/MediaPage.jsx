@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import { Delete as DeleteIcon, CloudUpload as UploadIcon } from '@mui/icons-material';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5005/api';
+const API_URL = process.env.REACT_APP_API_URL || '/api';
 
 export default function MediaPage() {
   const [files, setFiles] = useState([]);
