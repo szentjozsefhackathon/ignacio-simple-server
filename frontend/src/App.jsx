@@ -79,8 +79,8 @@ function LandingPage() {
             Különböző imamódok Szent Ignác nyomdokain
           </Typography>
           <Typography variant="body1" sx={{ maxWidth: 600, mx: "auto", opacity: 0.85 }}>
-            Ha szeretnél egy kicsit elcsendesedni, jelen lenni, időt adni magadnak és a jó Istennek, és ehhez jól jönne egy kis segítség. Töltsd le az alkalmazást, vagy 
-            használd webes verziónkat.
+            Ha szeretnél egy kicsit elcsendesedni, jelen lenni, időt adni magadnak és Istennek, és ehhez jól jönne egy kis segítség. Töltsd le az alkalmazást, vagy 
+            használd webes verziót.
           </Typography>
         </Container>
       </Box>
