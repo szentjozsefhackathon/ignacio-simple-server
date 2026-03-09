@@ -29,8 +29,7 @@ certs/
 *.key
 
 # Images and voice files
-frontend/public/*
-!frontend/public/index.html
+# Ignore all by default
 *.png
 *.jpg
 *.jpeg
@@ -38,6 +37,12 @@ frontend/public/*
 *.mp3
 *.wav
 *.ogg
+
+# But keep icons and manifest for the PWA in the public folder
+!frontend/public/*.png
+!frontend/public/*.ico
+!frontend/public/manifest.json
+!frontend/public/index.html
 
 # Data (development)
 backend/src/data/
