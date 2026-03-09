@@ -21,7 +21,7 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
-  InputAdornment,
+  Autocomplete,
 } from '@mui/material';
 import { Delete as DeleteIcon, Edit as EditIcon, Add as AddIcon } from '@mui/icons-material';
 
@@ -31,6 +31,8 @@ export default function PrayersPage() {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [prayers, setPrayers] = useState([]);
+  const [imageFiles, setImageFiles] = useState([]);
+  const [voiceFiles, setVoiceFiles] = useState([]);
   const [open, setOpen] = useState(false);
   const [editingPrayer, setEditingPrayer] = useState(null);
   const [formData, setFormData] = useState({
@@ -43,6 +45,8 @@ export default function PrayersPage() {
 
   useEffect(() => {
     fetchCategories();
+    fetchImageFiles();
+    fetchVoiceFiles();
   }, []);
 
   useEffect(() => {
@@ -60,6 +64,24 @@ export default function PrayersPage() {
       }
     } catch (error) {
       console.error('Hiba a kategóriák betöltésekor:', error);
+    }
+  };
+
+  const fetchImageFiles = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/media/list?type=image`);
+      setImageFiles(response.data.map(f => f.filename));
+    } catch (error) {
+      console.error('Hiba a képek betöltésekor:', error);
+    }
+  };
+
+  const fetchVoiceFiles = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/media/list?type=voice`);
+      setVoiceFiles(response.data.map(f => f.filename));
+    } catch (error) {
+      console.error('Hiba a hangok betöltésekor:', error);
     }
   };
 
@@ -123,11 +145,6 @@ export default function PrayersPage() {
         console.error('Hiba az ima törlésekor:', error);
       }
     }
-  };
-
-  const handleVoiceOptionsChange = (value) => {
-    const options = value.split(',').map(v => v.trim()).filter(v => v);
-    setFormData({ ...formData, voice_options: options });
   };
 
   return (
@@ -211,19 +228,28 @@ export default function PrayersPage() {
             value={formData.description}
             onChange={(e) => setFormData({ ...formData, description: e.target.value })}
           />
-          <TextField
-            margin="dense"
-            label="Kép fájlnév"
-            fullWidth
+          <Autocomplete
+            options={imageFiles}
             value={formData.image}
-            onChange={(e) => setFormData({ ...formData, image: e.target.value })}
+            onChange={(event, newValue) => {
+              setFormData({ ...formData, image: newValue || '' });
+            }}
+            renderInput={(params) => (
+              <TextField {...params} margin="dense" label="Kép" fullWidth />
+            )}
+            sx={{ mt: 1 }}
           />
-          <TextField
-            margin="dense"
-            label="Hangopciók (vesszővel elválasztva)"
-            fullWidth
-            value={formData.voice_options.join(', ')}
-            onChange={(e) => handleVoiceOptionsChange(e.target.value)}
+          <Autocomplete
+            multiple
+            options={voiceFiles}
+            value={formData.voice_options}
+            onChange={(event, newValue) => {
+              setFormData({ ...formData, voice_options: newValue });
+            }}
+            renderInput={(params) => (
+              <TextField {...params} margin="dense" label="Hangopciók" fullWidth />
+            )}
+            sx={{ mt: 1 }}
           />
           <TextField
             margin="dense"

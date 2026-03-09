@@ -19,17 +19,20 @@ import {
   IconButton,
 } from '@mui/material';
 import { Delete as DeleteIcon, Edit as EditIcon, Add as AddIcon } from '@mui/icons-material';
+import { Autocomplete } from '@mui/material';
 
 const API_URL = process.env.REACT_APP_API_URL || '/api';
 
 export default function CategoriesPage() {
   const [categories, setCategories] = useState([]);
+  const [imageFiles, setImageFiles] = useState([]);
   const [open, setOpen] = useState(false);
   const [editingCategory, setEditingCategory] = useState(null);
   const [formData, setFormData] = useState({ title: '', image: '' });
 
   useEffect(() => {
     fetchCategories();
+    fetchImageFiles();
   }, []);
 
   const fetchCategories = async () => {
@@ -38,6 +41,15 @@ export default function CategoriesPage() {
       setCategories(response.data);
     } catch (error) {
       console.error('Hiba a kategóriák betöltésekor:', error);
+    }
+  };
+
+  const fetchImageFiles = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/media/list?type=image`);
+      setImageFiles(response.data.map(f => f.filename));
+    } catch (error) {
+      console.error('Hiba a képek betöltésekor:', error);
     }
   };
 
@@ -135,12 +147,16 @@ export default function CategoriesPage() {
             value={formData.title}
             onChange={(e) => setFormData({ ...formData, title: e.target.value })}
           />
-          <TextField
-            margin="dense"
-            label="Kép fájlnév"
-            fullWidth
+          <Autocomplete
+            options={imageFiles}
             value={formData.image}
-            onChange={(e) => setFormData({ ...formData, image: e.target.value })}
+            onChange={(event, newValue) => {
+              setFormData({ ...formData, image: newValue || '' });
+            }}
+            renderInput={(params) => (
+              <TextField {...params} margin="dense" label="Kép" fullWidth />
+            )}
+            sx={{ mt: 1 }}
           />
         </DialogContent>
         <DialogActions>

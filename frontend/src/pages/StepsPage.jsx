@@ -22,6 +22,7 @@ import {
   FormControl,
   InputLabel,
   Chip,
+  Autocomplete,
 } from '@mui/material';
 import { Delete as DeleteIcon, Edit as EditIcon, Add as AddIcon } from '@mui/icons-material';
 
@@ -33,7 +34,7 @@ export default function StepsPage() {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedPrayer, setSelectedPrayer] = useState('');
   const [steps, setSteps] = useState([]);
-  const [mediaFiles, setMediaFiles] = useState([]);
+  const [voiceFiles, setVoiceFiles] = useState([]);
   const [open, setOpen] = useState(false);
   const [editingStep, setEditingStep] = useState(null);
   const [formData, setFormData] = useState({
@@ -45,7 +46,7 @@ export default function StepsPage() {
 
   useEffect(() => {
     fetchCategories();
-    fetchMediaFiles();
+    fetchVoiceFiles();
   }, []);
 
   useEffect(() => {
@@ -96,12 +97,12 @@ export default function StepsPage() {
     }
   };
 
-  const fetchMediaFiles = async () => {
+  const fetchVoiceFiles = async () => {
     try {
-      const response = await axios.get(`${API_URL}/media/list?type=audio`);
-      setMediaFiles(response.data);
+      const response = await axios.get(`${API_URL}/media/list?type=voice`);
+      setVoiceFiles(response.data.map(f => f.filename));
     } catch (error) {
-      console.error('Hiba a médiafájlok betöltésekor:', error);
+      console.error('Hiba a hangfájlok betöltésekor:', error);
     }
   };
 
@@ -162,13 +163,6 @@ export default function StepsPage() {
         console.error('Hiba a lépés törlésekor:', error);
       }
     }
-  };
-
-  const toggleVoice = (filename) => {
-    const newVoices = formData.voices.includes(filename)
-      ? formData.voices.filter(v => v !== filename)
-      : [...formData.voices, filename];
-    setFormData({ ...formData, voices: newVoices });
   };
 
   return (
@@ -277,18 +271,18 @@ export default function StepsPage() {
             </Select>
           </FormControl>
           
-          <Typography variant="subtitle1" sx={{ mt: 2, mb: 1 }}>Hangfájlok</Typography>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-            {mediaFiles.map((file) => (
-              <Chip
-                key={file.filename}
-                label={file.filename}
-                onClick={() => toggleVoice(file.filename)}
-                color={formData.voices.includes(file.filename) ? 'primary' : 'default'}
-                variant={formData.voices.includes(file.filename) ? 'filled' : 'outlined'}
-              />
-            ))}
-          </Box>
+          <Autocomplete
+            multiple
+            options={voiceFiles}
+            value={formData.voices}
+            onChange={(event, newValue) => {
+              setFormData({ ...formData, voices: newValue });
+            }}
+            renderInput={(params) => (
+              <TextField {...params} margin="dense" label="Hangfájlok" fullWidth />
+            )}
+            sx={{ mt: 2 }}
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Mégse</Button>
