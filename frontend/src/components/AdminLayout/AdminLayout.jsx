@@ -25,7 +25,7 @@ import {
 } from '@mui/icons-material';
 import { useAuth } from '../../context/AuthContext';
 
-const logoUrl = process.env.PUBLIC_URL + "/icon_foreground.png";
+const logoUrl = "/icon_foreground.png";
 
 const drawerWidth = 260;
 

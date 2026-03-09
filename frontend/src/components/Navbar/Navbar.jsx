@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { Edit as EditIcon, Login as LoginIcon } from "@mui/icons-material";
 
-const logoUrl = process.env.PUBLIC_URL + "/icon_foreground.png";
+const logoUrl = "/icon_foreground.png";
 
 function Navbar() {
   const navigate = useNavigate();

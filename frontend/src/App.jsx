@@ -32,7 +32,7 @@ function LandingPage() {
       title: "Web App",
       description: "Használd böngészőben",
       icon: <Language sx={{ fontSize: 48, color: "#8B0000" }} />,
-      href: "/flutter",
+      href: "/web-app",
       external: true,
     },
     {

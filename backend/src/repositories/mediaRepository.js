@@ -54,10 +54,10 @@ const mediaRepository = {
   },
 
   async upload(buffer, filename, contentType) {
-    // Upload to S3
-    const { key, url } = await uploadFile(buffer, filename, contentType);
-    
     const mediaType = contentType.startsWith('image/') ? 'image' : 'voice';
+    const folder = mediaType === 'image' ? 'images' : 'voices';
+    
+    const { key, url } = await uploadFile(buffer, filename, contentType, folder);
     
     // Save to database
     const result = await db('media').insert({

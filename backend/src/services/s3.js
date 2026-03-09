@@ -61,9 +61,9 @@ async function ensureBucket() {
   }
 }
 
-async function uploadFile(fileBuffer, filename, contentType) {
+async function uploadFile(fileBuffer, filename, contentType, folder = 'uploads') {
   const client = getS3Client();
-  const key = `uploads/${Date.now()}-${filename}`;
+  const key = `${folder}/${filename}`;
 
   const command = new PutObjectCommand({
     Bucket: bucketName,
@@ -74,9 +74,19 @@ async function uploadFile(fileBuffer, filename, contentType) {
 
   await client.send(command);
 
+  const baseUrl = '/api';
+  let url;
+  if (folder === 'images') {
+    url = `${baseUrl}/media/images/${filename}`;
+  } else if (folder === 'voices') {
+    url = `${baseUrl}/media/voices/${filename}`;
+  } else {
+    url = `${process.env.MINIO_PUBLIC_URL || `http://${process.env.MINIO_ENDPOINT || 'localhost:9000'}`}/${bucketName}/${key}`;
+  }
+
   return {
     key,
-    url: `${process.env.MINIO_PUBLIC_URL || `http://${process.env.MINIO_ENDPOINT || 'localhost:9000'}`}/${bucketName}/${key}`
+    url
   };
 }
 
@@ -126,7 +136,16 @@ async function getFile(key) {
 }
 
 async function getFileUrl(key) {
-  getS3Client();
+  const baseUrl = '/api';
+  
+  if (key.startsWith('images/')) {
+    const filename = key.replace('images/', '');
+    return `${baseUrl}/media/images/${filename}`;
+  } else if (key.startsWith('voices/')) {
+    const filename = key.replace('voices/', '');
+    return `${baseUrl}/media/voices/${filename}`;
+  }
+  
   return `${process.env.MINIO_PUBLIC_URL || `http://${process.env.MINIO_ENDPOINT || 'localhost:9000'}`}/${bucketName}/${key}`;
 }
 
