@@ -1,6 +1,6 @@
 services:
   flutter-web:
-    image: ghcr.io/szentjozsefhackathon/ignacio-flutter-web:79be1ac193de56b774943d0c69b65c1386cdcbb7
+    image: ghcr.io/szentjozsefhackathon/ignacio-flutter-web:latest
     restart: always
     mem_limit: 128m
 

@@ -195,9 +195,9 @@ function LandingPage() {
         {/* Imamódok link */}
         <Box sx={{ mt: 4, mb: 4 }}>
           <Typography variant="body1" sx={{ textAlign: 'center' }}>
-            Ha többet szeretnél megtudni az imamódokról, látogass el{' '}
+            Ha többet szeretnél megtudni az imamódokról, látogass el a {' '}
             <Link href="https://manreza.hu/menu/nagybojti-online-lelkigyakorlat-imamodok" target="_blank" rel="noopener noreferrer">
-              ide
+              manréza imamódok oldalára
             </Link>
             .
           </Typography>
