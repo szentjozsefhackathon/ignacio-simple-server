@@ -3,6 +3,8 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const mediaRepository = require('../repositories/mediaRepository');
+const db = require('../db/connection');
+const { updateVersion } = require('../utils/fileUtils');
 
 const storage = multer.memoryStorage();
 
@@ -32,6 +34,7 @@ router.post('/upload', upload.single('file'), async (req, res) => {
       req.file.mimetype
     );
     
+    updateVersion(result.media_type === 'image' ? 'images' : 'voices');
     res.status(201).json(result);
   } catch (err) {
     console.error('Error uploading file:', err);
@@ -55,7 +58,11 @@ router.delete('/:id', async (req, res) => {
     if (isNaN(id)) {
       return res.status(400).json({ error: 'Ervenytelen azonosito' });
     }
+    const media = await db('media').where('id', id).first();
     await mediaRepository.delete(id);
+    if (media) {
+      updateVersion(media.media_type === 'image' ? 'images' : 'voices');
+    }
     res.json({ message: 'Fajl torolve' });
   } catch (err) {
     console.error('Error deleting media:', err);

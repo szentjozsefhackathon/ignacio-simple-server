@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const categoryRepository = require('../repositories/categoryRepository');
+const { updateVersion } = require('../utils/fileUtils');
 
 router.get('/', async (req, res) => {
   try {
@@ -33,6 +34,7 @@ router.post('/', async (req, res) => {
     }
     
     const category = await categoryRepository.create({ title, image });
+    updateVersion('data');
     res.status(201).json(category);
   } catch (err) {
     console.error('Error creating category:', err);
@@ -47,6 +49,7 @@ router.put('/:id', async (req, res) => {
     if (!category) {
       return res.status(404).json({ error: 'A kategoria nem talalhato' });
     }
+    updateVersion('data');
     res.json(category);
   } catch (err) {
     console.error('Error updating category:', err);
@@ -61,6 +64,7 @@ router.delete('/:id', async (req, res) => {
       return res.status(400).json({ error: 'Ervenytelen azonosito' });
     }
     await categoryRepository.delete(id);
+    updateVersion('data');
     res.json({ message: 'Kategoria torolve' });
   } catch (err) {
     console.error('Error deleting category:', err);

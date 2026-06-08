@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const stepRepository = require('../repositories/stepRepository');
+const { updateVersion } = require('../utils/fileUtils');
 
 router.get('/prayer/:prayerId', async (req, res) => {
   try {
@@ -27,6 +28,7 @@ router.post('/prayer/:prayerId', async (req, res) => {
       voices
     });
     
+    updateVersion('data');
     res.status(201).json(step);
   } catch (err) {
     console.error('Error creating step:', err);
@@ -49,6 +51,7 @@ router.put('/:id', async (req, res) => {
       return res.status(404).json({ error: 'A lepes nem talalhato' });
     }
     
+    updateVersion('data');
     res.json(step);
   } catch (err) {
     console.error('Error updating step:', err);
@@ -63,6 +66,7 @@ router.delete('/:id', async (req, res) => {
       return res.status(400).json({ error: 'Ervenytelen azonosito' });
     }
     await stepRepository.delete(id);
+    updateVersion('data');
     res.json({ message: 'Lepes torolve' });
   } catch (err) {
     console.error('Error deleting step:', err);

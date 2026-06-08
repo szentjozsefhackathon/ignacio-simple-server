@@ -17,4 +17,11 @@ function getFilesList(directoryPath) {
   }));
 }
 
-module.exports = { getJsonData, getFilesList };
+function updateVersion(field) {
+  const filePath = path.join(__dirname, '../db/versions.json');
+  const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  data[field] = new Date().toISOString();
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 4) + '\n');
+}
+
+module.exports = { getJsonData, getFilesList, updateVersion };

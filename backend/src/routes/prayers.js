@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const prayerRepository = require('../repositories/prayerRepository');
+const { updateVersion } = require('../utils/fileUtils');
 
 router.get('/category/:id', async (req, res) => {
   try {
@@ -39,6 +40,7 @@ router.post('/category/:id', async (req, res) => {
       voice_options,
       minTimeInMinutes
     });
+    updateVersion('data');
     res.status(201).json(prayer);
   } catch (err) {
     console.error('Error creating prayer:', err);
@@ -59,6 +61,7 @@ router.put('/:id', async (req, res) => {
     if (!prayer) {
       return res.status(404).json({ error: 'Az ima nem talalhato' });
     }
+    updateVersion('data');
     res.json(prayer);
   } catch (err) {
     console.error('Error updating prayer:', err);
@@ -73,6 +76,7 @@ router.delete('/:id', async (req, res) => {
       return res.status(400).json({ error: 'Ervenytelen azonosito' });
     }
     await prayerRepository.delete(id);
+    updateVersion('data');
     res.json({ message: 'Ima torolve' });
   } catch (err) {
     console.error('Error deleting prayer:', err);
