@@ -9,6 +9,7 @@ import CategoriesPage from "./pages/CategoriesPage";
 import PrayersPage from "./pages/PrayersPage";
 import StepsPage from "./pages/StepsPage";
 import MediaPage from "./pages/MediaPage";
+import AdatvedelemPage from "./pages/AdatvedelemPage";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import "./App.css";
 
@@ -247,6 +248,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/adatvedelem" element={<AdatvedelemPage />} />
           <Route path="/admin/*" element={
             <ProtectedRouteWithLayout />
           } />
