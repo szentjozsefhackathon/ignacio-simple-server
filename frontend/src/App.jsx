@@ -40,14 +40,14 @@ function LandingPage() {
       title: "Android",
       description: "Letöltés a Play Áruházból",
       icon: <Android sx={{ fontSize: 48, color: "#8B0000" }} />,
-      href: "https://play.google.com/store/apps/details?id=hu.jezsuita.ima.ignaci",
+      href: "https://play.google.com/store/apps/details?id=hu.jezsuita.ignaciima",
       external: true,
     },
     {
       title: "iOS",
       description: "Letöltés az App Store-ból",
       icon: <PhoneIphone sx={{ fontSize: 48, color: "#8B0000" }} />,
-      href: "https://apps.apple.com",
+      href: "https://apps.apple.com/us/app/ign%C3%A1ci-im%C3%A1k/id6756560216",
       external: true,
     },
     // {
